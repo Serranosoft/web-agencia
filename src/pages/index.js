@@ -5,17 +5,11 @@ import SeoCharts from '@/home/charts/seo-charts'
 import Floating from '@/components/contact/floating'
 import Rocket from '@/home/rocket/rocket'
 import SeoFeatures from '@/home/seo-features/seoFeatures'
-import Comparison from '@/home/comparison/comparison'
-import Test from '@/home/persuassion/persuassion'
 import Designs from '@/home/designs/designs'
-import Showcase from '@/home/blog/showcase'
 import SeoFeatures2 from '@/home/seo-features2/seoFeatures2'
-import Persuassion from '@/home/persuassion/persuassion'
 import DesignFeatures from '@/home/design-features/designFeatures'
-import DesignGuide from '@/home/design-guide/design-guide'
 import Faq from '@/home/faq/faq'
 import Aos from '@/components/aos/aos'
-import WhoWeAre from '@/home/who/who'
 
 export default function Home() {
     return (
@@ -57,21 +51,15 @@ export default function Home() {
                 sendcloud webpage
 
             */}
-            <div className={styles.bg}></div>
             <Aos />
             <Floating />
             <Hero />
             <SeoCharts />
             <SeoFeatures />
-            <Comparison />
             <SeoFeatures2 />
             <Rocket />
-            <Showcase />
             <Designs />
             <DesignFeatures />
-            <DesignGuide />
-            <Persuassion />
-            <WhoWeAre />
             <Faq />
 
 
