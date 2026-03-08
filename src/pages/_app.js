@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
                 <meta property="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg" />
                 <meta property="og:type" content="website"></meta>
                 <meta name="twitter:card" content="summary_large_image"></meta>
-                <link rel="icon" href="/favicon.svg" />
+                <link rel="icon" href="/favicon.ico" />
                 {/* <meta name="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta> */}
                 {/* <meta name="twitter:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta> */}
             </Head>
