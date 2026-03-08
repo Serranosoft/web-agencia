@@ -6,6 +6,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     gap: 2rem;
     padding: 1rem clamp(1rem, 1rem + 3vw, 5rem);
@@ -14,7 +15,6 @@
     backdrop-filter: blur(10px);
     transition: all 0.75s;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-
 
     .logo {
         display: flex;
@@ -31,14 +31,13 @@
 
         a {
             line-height: 0;
+            display: block;
+            width: 14rem;
 
-            svg {
-                width: 12rem;
+            img {
+                width: 100%;
                 height: auto;
-
-                path {
-                    fill: #2D3436;
-                }
+                object-fit: contain;
             }
         }
     }
@@ -49,6 +48,7 @@
         gap: 1.5rem;
         align-items: center;
         position: relative;
+        
         svg.close {
             display: none;
             position: absolute;
@@ -57,16 +57,10 @@
             cursor: pointer;
         }
 
-        svg:not(.close) {
+        // Hide the logo link inside the menu on desktop
+        a:first-of-type {
             display: none;
-            width: 100%;
-            height: auto;
-            max-width: 10rem;
-            margin: 2rem 0;
-            path {
-                fill: #ffffff;
-            }
-        } 
+        }
 
         a {
             font-size: clamp(1.20rem, 0.15vw + 1.1rem, 1.27rem);
@@ -95,7 +89,8 @@
                 display: block;
             }
 
-            svg {
+            // Hide main logo container on mobile as we'll use burgers
+            a {
                 display: none;
             }
         }
@@ -109,26 +104,39 @@
             top: 0;
             left: 0;
             width: 75%;
-            padding: 5rem 0;
+            padding: 5rem 2rem;
             flex-direction: column;
             height: 100vh;
             background-color: #FFFFFF;
             box-shadow: 20px 0 50px rgba(0,0,0,0.1);
             z-index: 1000;
+            align-items: flex-start;
+
             svg.close {
                 display: block;
                 path {
                     fill: #2D3436;
                 }
             }
-            button, svg:not(.close) {
+
+            // Show mobile logo link
+            a:first-of-type {
                 display: block;
-            }
-            svg:not(.close) {
-                path {
-                    fill: #2D3436;
+                width: 100%;
+                max-width: 12rem;
+                margin-bottom: 2rem;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
                 }
+            }
+
+            button {
+                display: block;
+                margin-top: 1rem;
             }
         }
     }
-}
+}
