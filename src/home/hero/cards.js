@@ -13,11 +13,14 @@ export default function Cards() {
     const [cardActive, setCardActive] = useState(2);
 
     useEffect(() => {
-        cards.current.querySelector(`.parallax:nth-child(1) .card .active`).style.opacity = "1";
+        const firstCard = cards.current.querySelector(`.parallax:nth-child(1) .card`);
+        firstCard.classList.add(styles.activeCard);
+        firstCard.querySelector(".active").style.opacity = "1";
 
         cards.current.querySelectorAll(`.parallax .card`).forEach((card) => card.addEventListener("mouseover", () => {
             window.clearTimeout(timeOut.current);
             clearAllActives();
+            card.classList.add(styles.activeCard);
             card.querySelector(".active").style.opacity = "1";
         }));
     }, [])
@@ -26,7 +29,9 @@ export default function Cards() {
         if (cardActive > 0) {
             timeOut.current = setTimeout(() => {
                 clearAllActives();
-                cards.current.querySelector(`.parallax:nth-child(${cardActive}) .card .active`).style.opacity = "1";
+                const currentCard = cards.current.querySelector(`.parallax:nth-child(${cardActive}) .card`);
+                currentCard.classList.add(styles.activeCard);
+                currentCard.querySelector(".active").style.opacity = "1";
                 if (cardActive < 4) {
                     setCardActive(cardActive + 1);
                 } else {
@@ -43,7 +48,10 @@ export default function Cards() {
     }, [cardActive])
 
     function clearAllActives() {
-        cards.current.querySelectorAll(`.parallax .card`).forEach((card) => card.querySelector(".active").style.opacity = "0");
+        cards.current.querySelectorAll(`.parallax .card`).forEach((card) => {
+            card.querySelector(".active").style.opacity = "0";
+            card.classList.remove(styles.activeCard);
+        });
     }
 
     return (

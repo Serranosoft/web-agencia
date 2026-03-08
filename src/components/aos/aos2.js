@@ -13,7 +13,7 @@ export default function Aos2() {
                     }
                 }
             })
-        }, { threshold: 0.5 })
+        }, { threshold: 0.1 })
 
         let elements = document.querySelectorAll(".aos-effect2-observer");
         elements.forEach((el) => observer.observe(el));
