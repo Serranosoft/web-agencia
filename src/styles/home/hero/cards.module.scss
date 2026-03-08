@@ -6,57 +6,14 @@
     gap: 1.2rem;
 
     &>div {
-        &:nth-child(1) {
-            .card {
-                &:hover {
-                    .cardContent {
-                        svg {
-                            fill: yellow;
-                        }
-                    }
-                }
+        &:nth-child(even) {
+            .card:hover .cardContent svg {
+                fill: #FF7A00;
             }
         }
-
-        &:nth-child(2) {
-            .card {
-                transition-delay: 100ms;
-
-                &:hover {
-                    .cardContent {
-                        svg {
-                            fill: orange;
-                        }
-                    }
-                }
-            }
-        }
-
-        &:nth-child(3) {
-            .card {
-                transition-delay: 200ms;
-
-                &:hover {
-                    .cardContent {
-                        svg {
-                            fill: greenyellow;
-                        }
-                    }
-                }
-            }
-        }
-
-        &:nth-child(4) {
-            .card {
-                transition-delay: 300ms;
-
-                &:hover {
-                    .cardContent {
-                        svg {
-                            fill: aquamarine;
-                        }
-                    }
-                }
+        &:nth-child(odd) {
+            .card:hover .cardContent svg {
+                fill: #FFB800;
             }
         }
     }
@@ -88,27 +45,25 @@
             border-radius: 1.3rem;
 
             &.cardActive {
-                background: linear-gradient(315deg, rgb(60, 0, 255) 0%, rgb(183, 0, 255) 100%);
-                box-shadow: rgba(131, 30, 228, 0.2) 0px 20px 40px 0px, rgba(255, 255, 255, 0.1) -2px 2px 2px 0px inset;
+                background: linear-gradient(315deg, #FFB800 0%, #FF7A00 100%);
+                box-shadow: rgba(255, 184, 0, 0.2) 0px 20px 40px 0px, rgba(255, 255, 255, 0.5) -2px 2px 2px 0px inset;
                 opacity: 0;
+                
+                ~ .cardContent {
+                    p, strong {
+                        color: #FFFFFF !important;
+                    }
+                    svg {
+                        fill: #FFFFFF !important;
+                    }
+                }
             }
 
             &.cardInactive {
-                background: linear-gradient(137deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-                box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 40px 0px, rgba(255, 255, 255, 0.1) 0px 1px 2px 0px inset;
+                background: #FFFFFF;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 20px 40px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px inset;
+                border: 1px solid rgba(0, 0, 0, 0.05);
                 opacity: 1;
-
-                &::after {
-                    position: absolute;
-                    content: "";
-                    width: 100%;
-                    height: 100%;
-                    background-size: 128px;
-                    background-repeat: repeat;
-                    background-image: url("https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png");
-                    opacity: 0.06;
-                    border-radius: inherit;
-                }
             }
         }
 

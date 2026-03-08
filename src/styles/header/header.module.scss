@@ -9,31 +9,11 @@
     justify-content: space-between;
     gap: 2rem;
     padding: 1rem clamp(1rem, 1rem + 3vw, 5rem);
-    z-index: 10;
-    background-color: #000;
-    background: rgba(0, 0, 0, 0.61);
-    box-shadow: 1px 0 3px lightgray;
-    backdrop-filter: blur(3px);
-    transition: all 0.75s;
     z-index: 1000;
-
-    &.light {
-        background-color: #fff;
-        background-color: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(1px);
-
-        &>div {
-            a svg path {
-                fill: #000000;
-
-            }
-        }
-        .menu {
-            a {
-                color: #000;
-            }
-        }
-    }
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    transition: all 0.75s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
 
     .logo {
@@ -44,6 +24,9 @@
         .burger {
             display: none;
             cursor: pointer;
+            path {
+                fill: #2D3436;
+            }
         }
 
         a {
@@ -54,7 +37,7 @@
                 height: auto;
 
                 path {
-                    fill: #ffffff;
+                    fill: #2D3436;
                 }
             }
         }
@@ -88,10 +71,10 @@
         a {
             font-size: clamp(1.20rem, 0.15vw + 1.1rem, 1.27rem);
             font-weight: bold;
-            color: #a8a8a8;
+            color: #636e72;
             transition: color 0.1s;         
             &:hover {
-                color: #ffffff;
+                color: #2D3436;
             }
         }
 
@@ -129,10 +112,22 @@
             padding: 5rem 0;
             flex-direction: column;
             height: 100vh;
-            background-color: #000000;
+            background-color: #FFFFFF;
+            box-shadow: 20px 0 50px rgba(0,0,0,0.1);
             z-index: 1000;
-            svg.close, button, svg:not(.close) {
+            svg.close {
                 display: block;
+                path {
+                    fill: #2D3436;
+                }
+            }
+            button, svg:not(.close) {
+                display: block;
+            }
+            svg:not(.close) {
+                path {
+                    fill: #2D3436;
+                }
             }
         }
     }

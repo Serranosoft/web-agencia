@@ -15,8 +15,8 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Agencia de Diseño Web & Posicionamiento SEO — Kaoos</title>
-                <meta name="description" content="Kaoos es una agencia española de diseño, desarrollo y mejora de posicionamiento para páginas webs." />
+                <title>tuwebencadiz.es — Agencia de Diseño Web & Posicionamiento SEO en Cádiz</title>
+                <meta name="description" content="tuwebencadiz.es es tu agencia en Cádiz especializada en diseño web profesional, desarrollo a medida y posicionamiento SEO para impulsar tu negocio." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" strategy='beforeInteractive' />
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js" strategy='beforeInteractive' />

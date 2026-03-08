@@ -13,8 +13,8 @@ export default function Hero() {
                 <div className={styles.root}>
                     <div className="aos-effect2-observer">
                         <div className={`${styles.heading} aos-effect3-observer`}>
-                            <H1 title className={"aos-effect3-el"}>Ordenamos tu Kaoos y lo convertimos en un éxito</H1>
-                            <SubHeading line className={"aos-effect3-el"}>(Agencia de marketing digital)</SubHeading>
+                            <H1 title className={"aos-effect3-el"}>Llevamos tu negocio al mundo digital</H1>
+                            <SubHeading line className={"aos-effect3-el"}>(tuwebencadiz.es - Agencia de Desarrollo Web & SEO)</SubHeading>
                         </div>
                         <Cards />
                         <HorizontalCard />

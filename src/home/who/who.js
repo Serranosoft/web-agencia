@@ -10,7 +10,7 @@ export default function WhoWeAre() {
     return (
         <Container className={styles.root}>
             <Text xxxl>¿Quiénes somos?</Text>
-            <SubHeading>Descubre quien está detrás de Kaoos</SubHeading>
+            <SubHeading>Descubre quien está detrás de tuwebencadiz.es</SubHeading>
             <div className={styles.container}>
                 <div className={`${styles.card} ${styles.card1}`}>
                     <div className={styles.border}>

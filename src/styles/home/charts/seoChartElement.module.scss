@@ -8,9 +8,10 @@
     gap: 2rem;
     padding: 2.5rem;
     border-radius: 1.2rem;
-    box-shadow: rgba(230, 46, 240, 0.4) 0px 5px, rgba(230, 46, 240, 0.3) 0px 10px, rgba(230, 46, 240, 0.2) 0px 15px, rgba(230, 46, 240, 0.1) 0px 20px, rgba(230, 46, 240, 0.05) 0px 25px;
+    box-shadow: rgba(255, 184, 0, 0.4) 0px 5px, rgba(255, 184, 0, 0.3) 0px 10px, rgba(255, 184, 0, 0.2) 0px 15px, rgba(255, 184, 0, 0.1) 0px 20px, rgba(255, 184, 0, 0.05) 0px 25px;
     transition: all 0.3s;
-    background: $box;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     overflow: hidden;
 
     .blurDecoration1,
@@ -23,20 +24,20 @@
 
         &.blurDecoration1 {
             top: 200px;
-            left: -150;
-            background: radial-gradient(50% 50% at 50% 50%, rgba(255, 0, 242, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+            left: -150px;
+            background: radial-gradient(50% 50% at 50% 50%, rgba(255, 184, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
         }
 
         &.blurDecoration2 {
             left: 500px;
             top: 50px;
-            background: radial-gradient(50% 50% at 50% 50%, rgba(255, 196, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+            background: radial-gradient(50% 50% at 50% 50%, rgba(255, 122, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
         }
 
         &.blurDecoration3 {
             left: 750px;
             top: -50px;
-            background: radial-gradient(50% 50% at 50% 50%, rgba(0, 140, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+            background: radial-gradient(50% 50% at 50% 50%, rgba(255, 184, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
         }
     }
 
@@ -58,8 +59,9 @@
                 gap: 0.5rem;
                 padding: 1rem;
                 text-align: center;
-                background: linear-gradient(137deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-                box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 40px 0px, rgba(255, 255, 255, 0.1) 0px 1px 2px 0px inset;
+                background: #FFFFFF;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 20px 40px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px inset;
+                border: 1px solid rgba(0, 0, 0, 0.05);
                 border-radius: 0.6rem;
                 cursor: pointer;
                 transition: transform 0.15s;

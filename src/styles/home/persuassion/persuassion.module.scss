@@ -1,7 +1,7 @@
 @import "../../colors.scss";
 
 .root {
-    display: flex;
+    display: block;
     margin: 8rem 0;
 
     .banner {
@@ -24,8 +24,10 @@
             transform-style: preserve-3d;
 
             &>div {
-                padding: 50px;
-                background: #222;
+                padding: 100px 50px;
+                background: #FFFFFF;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
                 transform-style: preserve-3d;
                 height: 100%;
 
@@ -36,7 +38,7 @@
                     width: 100%;
                     left: 0;
                     height: 50px;
-                    background-color: #BFBFBF;
+                    background-color: #FFB800;
                     top: -50px;
                     transform-origin: center bottom;
                     transform: rotatex(90deg);
@@ -49,7 +51,7 @@
                     width: 100%;
                     left: 0;
                     height: 50px;
-                    background-color: #BFBFBF;
+                    background-color: #FF7A00;
                     bottom: -50px;
                     transform-origin: center top;
                     transform: rotatex(-90deg);
@@ -101,24 +103,24 @@
 
     .halfBanner {
         height: 30vh;
-        background: #E0E0E0;
-        color: #000;
+        background: #F9F9F9;
+        color: #2D3436;
         display: flex;
         justify-content: center;
         align-items: center;
 
         p {
-            color: black;
+            color: #2D3436;
         }
     }
 
     .miniBanner {
         height: 15vh;
-        background: #E0E0E0;
+        background: #F9F9F9;
     }
 
     p {
-        color: white;
+        color: #2D3436;
         text-align: center;
         padding: 0 0.5rem;
     }
@@ -137,8 +139,7 @@
 .gradient {
     height: 600px;
     width: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, #225E92);
-
+    background: linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 100%);
 }
 
 @media (max-width: 991px) {

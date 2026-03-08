@@ -20,7 +20,7 @@ export default function Info1() {
     
             gsap.to(".gsap-content", { scrollTrigger, scale: 0.85, });
             gsap.to(".gsap-wrapper", { scrollTrigger, duration: 0.5, backgroundColor: "rgba(255, 255, 255, 1)" });
-            gsap.to(".gsap-text", { scrollTrigger, color: "#000000" });
+            gsap.to(".gsap-text", { scrollTrigger, color: "#2D3436" });
             gsap.to(".gsap-rocket", { scrollTrigger, y: "-100vh", scale: 0.5 });
             gsap.to(".header", {
                 scrollTrigger: {
@@ -46,9 +46,9 @@ export default function Info1() {
 
                     <div className={`${styles.columns}`}>
                         <div className="aos-effect3-observer aos-effect3-el">
-                            <Text xxxl className={`${font.className} gsap-text`}>Despega tu</Text>
-                            <Text className="gsap-text">Podemos ordenar el Kaoos de tu mente y <strong>crear una página web con un diseño único</strong> a tu gusto.  </Text>
-                            <Text className="gsap-text">Solo necestiamos saber cómo funciona tu negocio para ponernos a trabajar.</Text>
+                            <Text xxxl className={`${font.className} gsap-text`}>Impulsa tu</Text>
+                            <Text className="gsap-text">En tuwebencadiz.es diseñamos <strong>páginas web únicas y profesionales</strong> adaptadas a tus necesidades reales. </Text>
+                            <Text className="gsap-text">Convertimos tus ideas en una ventana digital que atraiga clientes y genere confianza.</Text>
                         </div>
                         <div className="aos-effect3-observer aos-effect3-el">
                             <Text xxxl className={`${font.className} gsap-text`}>página web</Text>

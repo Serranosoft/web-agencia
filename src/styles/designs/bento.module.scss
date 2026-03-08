@@ -76,8 +76,9 @@
             .number {
                 font-size: 90px;
                 line-height: 1;
-                background: -webkit-linear-gradient(150deg, $purple, $highlight);
+                background: -webkit-linear-gradient(150deg, #FFB800, #FF7A00);
                 -webkit-background-clip: text;
+                background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
         }

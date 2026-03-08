@@ -50,7 +50,7 @@ export default function Persuassion() {
                 <section className={styles.banner}>
                     <div className="gsap-banner3d-1">
                         <div>
-                            <Text xxl kanit>¿Por qué elegir Kaoos y no otra agencia?</Text>
+                            <Text xxl kanit>¿Por qué elegir tuwebencadiz.es y no otra agencia?</Text>
                         </div>
                     </div>
                 </section>
@@ -71,7 +71,7 @@ export default function Persuassion() {
                 <section className={`${styles.banner} ${styles.divided}`}>
                     <div className="gsap-banner3d-3">
                         <div>
-                            <Text xxl kanit>Se trata de perspectiva</Text>
+                            <Text xxl kanit>tuwebencadiz.es - Expertos en resultados</Text>
                         </div>
                     </div>
                     <div className={styles.image}></div>

@@ -5,10 +5,10 @@
     padding: 0.85rem 1.85rem;
     font-weight: bold;
     background-color: transparent;
-    border: 1px solid #b8b8b8;
+    border: 1px solid #2D3436;
     border-radius: 0.8rem;
     outline: none;
-    color: white;
+    color: #2D3436;
     font-size: clamp(1.15rem, 0.30vw + 1.30rem, 1.4rem);
     white-space: pre;
     cursor: pointer;
@@ -21,7 +21,8 @@
     &.highlight {
         border: none;
         border-radius: 1.2rem;
-        background: linear-gradient(315deg, rgb(153, 0, 255) 0%, rgb(0, 136, 255) 100%);
+        background: linear-gradient(315deg, #FFB800 0%, #FF7A00 100%);
+        color: white;
     }
 
     &:hover,

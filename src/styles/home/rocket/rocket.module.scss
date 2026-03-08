@@ -7,7 +7,7 @@
         width: 100%;
         position: relative;
         will-change: background-color;
-        background-color: rgba(19, 0, 255, 0.3);
+        background-color: #FFB800;
 
         .content {
             position: sticky;
@@ -60,10 +60,9 @@
     .gradientBottom, .gradientTop {
         height: 200px;
         width: 100%;
-        background: rgb(19,0,255);
-        background: linear-gradient(180deg, rgba(19,0,255,0.3) 0%, rgba(0,0,0,1) 100%);
+        background: linear-gradient(180deg, #FFB800 0%, #FFFFFF 100%);
         &.gradientTop {
-            background: linear-gradient(0deg, rgba(19,0,255,0.3) 0%, rgba(0,0,0,1) 100%);
+            background: linear-gradient(0deg, #FFB800 0%, #FFFFFF 100%);
         }
     }
 
