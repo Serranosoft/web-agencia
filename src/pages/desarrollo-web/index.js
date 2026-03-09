@@ -152,7 +152,7 @@ export default function Designs() {
             </section>
 
             {/* Interactive GSAP Grids */}
-            <Container fullscreen className={styles.root} style={{ padding: '8rem 1rem' }}>
+            <Container fullscreen className={styles.root} style={{ padding: '8rem 1rem', backgroundColor: '#141411' }}>
                 <div className={styles.bg}></div>
                 <div className={styles.header}>
                     <H1 title kanit style={{ color: "white" }}>Bocetos e Interacción</H1>
