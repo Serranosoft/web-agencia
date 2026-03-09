@@ -13,7 +13,7 @@
 
 /* Hero Section */
 .heroWrapper {
-    background: linear-gradient(rgba(#141411, 0.8), rgba(#141411, 0.95)), url('/portfolio-hero.png') center/cover no-repeat;
+    background: linear-gradient(rgba(#141411, 0.9), rgba(#141411, 0.95)), url('/portfolio-hero.png') center/cover no-repeat;
     background-color: #141411;
     padding: 14rem 0 8rem;
     text-align: center;
@@ -35,12 +35,14 @@
     font-weight: 900;
     margin-bottom: 1.5rem;
     line-height: 1.1;
+    text-shadow: 0px 5px 15px rgba(0,0,0,0.6);
 }
 
 .heroDesc {
     font-size: 1.25rem;
     line-height: 1.6;
-    color: rgba($white, 0.8);
+    color: rgba($white, 0.9);
+    text-shadow: 0px 2px 10px rgba(0,0,0,0.8);
     margin-bottom: 3rem;
     max-width: 650px;
     margin-inline: auto;
