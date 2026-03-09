@@ -110,13 +110,13 @@
     }
 }
 
-.root :global {
-    .wp-block-buttons {
+.root {
+    :global(.wp-block-buttons) {
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 3rem 0;
-        .wp-block-button {
+        :global(.wp-block-button) {
             @include mixin.button;
             a {
                 color: #ffffff;
@@ -124,7 +124,7 @@
         }
     }
 
-    .wp-block-image {
+    :global(.wp-block-image) {
         display: flex;
         flex-direction: column;
         align-items: center;
