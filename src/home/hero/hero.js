@@ -19,11 +19,11 @@ export default function Hero() {
             const now = Date.now();
             const elapsed = now - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            
+
             // Ease out quad function
             const easedProgress = progress * (2 - progress);
             const current = Math.floor(start + (end - start) * easedProgress);
-            
+
             setPercentage(current);
 
             if (progress < 1) {
@@ -40,7 +40,7 @@ export default function Hero() {
                 <div className={styles.root}>
                     <div className={styles.content}>
                         <div className={styles.badge}>
-                            <span></span> Proyectos para el Q4 disponibles
+                            <span></span>  Talento digital desde el sur
                         </div>
                         <H1 kanit title className={styles.mainTitle}>
                             Acelera tu <br />
@@ -61,7 +61,7 @@ export default function Hero() {
                     <div className={styles.visual}>
                         <div className={styles.mockupContainer}>
                             <img src="/hero-mockup.png" alt="Dashboard Mockup" className={styles.mockup} />
-                            
+
                             <div className={styles.statsCard}>
                                 <div className={styles.iconWrapper}>
                                     <HiTrendingUp />
@@ -77,4 +77,4 @@ export default function Hero() {
             </Container>
         </section>
     )
-}
+}
