@@ -6,8 +6,8 @@ import { HiArrowUpRight } from 'react-icons/hi2'
 const projects = [
     {
         category: "E-Commerce",
-        title: "LuxeFurniture Global Rebrand",
-        image: "/luxefurniture.png"
+        title: "Debocado Rediseño Completo",
+        image: "/debocado.png"
     },
     {
         category: "SaaS",
