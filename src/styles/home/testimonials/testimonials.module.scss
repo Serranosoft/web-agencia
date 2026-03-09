@@ -1,0 +1,93 @@
+@import "../../colors";
+
+.wrapper {
+    padding: 8rem 0;
+    overflow: hidden;
+
+    @media (max-width: 968px) {
+        padding: 4rem 0;
+    }
+}
+
+.header {
+    margin-bottom: 5rem;
+    text-align: left;
+}
+
+.badge {
+    display: inline-block;
+    color: $gold;
+    font-weight: 850;
+    font-size: 0.85rem;
+    letter-spacing: 0.15rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.title {
+    color: $charcoal;
+    font-weight: 900;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: #FAFAFA; // Very light grey background
+    padding: 4rem 2.5rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.4s ease;
+    border: 1px solid rgba($charcoal, 0.03);
+
+    &:hover {
+        transform: translateY(-8px);
+        background: $white;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+        border-color: transparent;
+    }
+}
+
+.quoteIcon {
+    color: $gold;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.quoteText {
+    color: rgba($charcoal, 0.7);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    flex-grow: 1;
+    font-style: italic; // Standard for testimonials
+}
+
+.footer {
+    border-top: 1px solid rgba($charcoal, 0.08);
+    padding-top: 1.5rem;
+
+    .author {
+        color: $charcoal;
+        font-weight: 900;
+        margin-bottom: 0.2rem;
+        font-size: 1.2rem;
+    }
+
+    .position {
+        color: rgba($charcoal, 0.5);
+        font-size: 0.95rem;
+        font-weight: 700;
+    }
+}

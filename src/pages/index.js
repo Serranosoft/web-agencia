@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/home/home.module.scss'
 import Hero from '@/home/hero/hero'
+import Testimonials from '@/home/testimonials/testimonials'
 import SeoCharts from '@/home/charts/seo-charts'
 import Floating from '@/components/contact/floating'
 import Rocket from '@/home/rocket/rocket'
@@ -54,6 +55,7 @@ export default function Home() {
             <SeoCharts />
             <Rocket />
             <Designs />
+            <Testimonials />
             <Faq />
 
 
