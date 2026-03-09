@@ -10,8 +10,8 @@ const projects = [
         image: "/debocado.png"
     },
     {
-        category: "Copywriting & Desarrollo",
-        title: "Desarrollo y diseño íntegro de la página web",
+        category: "Copywriting & Desarrollo web",
+        title: "Diseño, branding y creación del servicio",
         image: "/humancopy.png"
     }
 ]
