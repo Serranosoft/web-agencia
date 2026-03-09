@@ -4,10 +4,7 @@ import Hero from '@/home/hero/hero'
 import SeoCharts from '@/home/charts/seo-charts'
 import Floating from '@/components/contact/floating'
 import Rocket from '@/home/rocket/rocket'
-import SeoFeatures from '@/home/seo-features/seoFeatures'
 import Designs from '@/home/designs/designs'
-import SeoFeatures2 from '@/home/seo-features2/seoFeatures2'
-import DesignFeatures from '@/home/design-features/designFeatures'
 import Faq from '@/home/faq/faq'
 import Aos from '@/components/aos/aos'
 
@@ -55,11 +52,8 @@ export default function Home() {
             <Floating />
             <Hero />
             <SeoCharts />
-            <SeoFeatures />
-            <SeoFeatures2 />
             <Rocket />
             <Designs />
-            <DesignFeatures />
             <Faq />
 
 
