@@ -4,7 +4,6 @@ import Container from "@/components/content/container";
 import Head from "next/head";
 import H1 from "@/components/content/h1";
 import Text from "@/components/content/text";
-import Bento from "@/designs/bento";
 import SubHeading from "@/components/content/subheading";
 import Stack from "@/designs/stack";
 import Aos from "@/components/aos/aos";
@@ -152,7 +151,7 @@ export default function Designs() {
             </section>
 
             {/* Interactive GSAP Grids */}
-            <Container fullscreen className={styles.root} style={{ padding: '8rem 1rem', backgroundColor: '#141411' }}>
+            <Container fullscreen className={styles.root} style={{ padding: '8rem 1rem' }}>
                 <div className={styles.bg}></div>
                 <div className={styles.header}>
                     <H1 title kanit style={{ color: "white" }}>Bocetos e Interacción</H1>
@@ -165,7 +164,6 @@ export default function Designs() {
                     <div className={`${styles.item} item`} style={{ backgroundImage: "url(/pomtoy.png)" }}></div>
                 </div>
 
-                <Bento />
 
                 <div className={styles.group}>
                     <div className={`${styles.item} item`} style={{ backgroundImage: "url(/crypto-experto.png)" }}></div>
