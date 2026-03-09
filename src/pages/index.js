@@ -9,6 +9,8 @@ import Floating from '@/components/contact/floating'
 import Rocket from '@/home/rocket/rocket'
 import Designs from '@/home/designs/designs'
 import Faq from '@/home/faq/faq'
+import Contact from '@/home/contact/contact'
+import Footer from '@/components/footer/footer'
 import Aos from '@/components/aos/aos'
 
 export default function Home() {
@@ -61,6 +63,8 @@ export default function Home() {
             <Designs />
             <Testimonials />
             <Faq />
+            <Contact />
+            <Footer />
 
 
         </>

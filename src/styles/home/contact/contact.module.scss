@@ -1,0 +1,165 @@
+@import "../../colors";
+
+.wrapper {
+    background: #141411; // Dark charcoal black
+    padding: 10rem 0;
+    color: $white;
+
+    @media (max-width: 968px) {
+        padding: 6rem 0;
+    }
+}
+
+.root {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+
+    @media (max-width: 1100px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+}
+
+.content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.title {
+    color: $white !important;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+
+.description {
+    color: rgba($white, 0.6);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 3.5rem;
+    font-weight: 500;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    .iconWrapper {
+        width: 45px;
+        height: 45px;
+        background: rgba($gold, 0.2);
+        color: $gold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 1.4rem;
+    }
+}
+
+.formArea {
+    flex: 1;
+    width: 100%;
+    max-width: 650px;
+}
+
+.form {
+    background: $white;
+    padding: 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.3);
+    color: #333;
+
+    @media (max-width: 480px) {
+        padding: 2.5rem;
+    }
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+
+    label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: rgba(30, 30, 30, 0.4);
+    }
+
+    input, select, textarea {
+        background: #f8faff;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 0.8rem;
+        padding: 1rem 1.2rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #333;
+        transition: all 0.3s ease;
+        font-family: inherit;
+
+        &:focus {
+            outline: none;
+            border-color: rgba($gold, 0.3);
+            background: $white;
+            box-shadow: 0 0 0 4px rgba($gold, 0.1);
+        }
+    }
+
+    textarea {
+        height: 120px;
+        resize: none;
+    }
+
+    select {
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+        background-position: right 1rem center;
+        background-repeat: no-repeat;
+        background-size: 1.5rem;
+    }
+}
+
+.submitBtn {
+    background: $gold;
+    color: $white;
+    width: 100%;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+
+    &:hover {
+        background: darken($gold, 5%);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba($gold, 0.25);
+    }
+}
