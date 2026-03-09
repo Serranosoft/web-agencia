@@ -173,13 +173,6 @@ export default function Designs() {
                 </div>
 
                 <Stack />
-
-                <div className={styles.group}>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/debocado-2.png)" }}></div>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/humancopy.png)" }}></div>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/pomtoy.png)" }}></div>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/datasync.png)" }}></div>
-                </div>
             </Container>
 
             {/* CTA Section */}
