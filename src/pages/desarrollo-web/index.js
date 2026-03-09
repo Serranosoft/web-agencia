@@ -159,28 +159,28 @@ export default function Designs() {
                     <SubHeading style={{ color: "rgba(255, 255, 255, 0.7)" }}>Clica en cada elemento para ver el diseño a pantalla completa.</SubHeading>
                 </div>
                 <div className={styles.group}>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/debocado.png)" }}></div>
+                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/datasync.png)" }}></div>
                     <video className={`${styles.item} item`} src="/dragsa-old.mp4" autoPlay loop muted />
-                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/pomtoy.png)" }}></div>
                 </div>
 
                 <Bento />
 
                 <div className={styles.group}>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/crypto-experto.png)" }}></div>
+                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/eye2.jpg)" }}></div>
+                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/hero-mockup.png)" }}></div>
+                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/luxefurniture.png)" }}></div>
                 </div>
 
                 <Stack />
 
                 <div className={styles.group}>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/debocado-2.png)" }}></div>
+                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/humancopy.png)" }}></div>
+                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/pomtoy.png)" }}></div>
+                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(/datasync.png)" }}></div>
                 </div>
             </Container>
 
