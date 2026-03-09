@@ -1,44 +1,57 @@
 import Container from "@/components/content/container";
-import Text from "@/components/content/text";
+import H2 from "@/components/content/h2";
 import styles from "@/styles/home/faq/faq.module.scss"
-import Link from "next/link";
-import { useEffect } from "react";
+import { useState } from "react";
+import { HiPlus } from "react-icons/hi";
+
+const faqItems = [
+    {
+        question: "¿Cuánto tiempo toma un proyecto típico?",
+        answer: "La mayoría de los proyectos web a nivel empresarial duran de 8 a 12 semanas, dependiendo de la complejidad y las integraciones de terceros requeridas."
+    },
+    {
+        question: "¿Qué tipo de ROI podemos esperar del SEO?",
+        answer: "El SEO es una inversión a largo plazo. La mayoría de los clientes ven un aumento significativo en el tráfico orgánico y la calidad de los leads entre 4 y 8 meses después de la implementación de la estrategia."
+    },
+    {
+        question: "¿Trabajan con plataformas CMS headless?",
+        answer: "Sí, nos especializamos en arquitecturas headless utilizando Contentful, Shopify y Sanity, combinados con frameworks de frontend como Next.js."
+    }
+]
+
 export default function Faq() {
+    const [activeIndex, setActiveIndex] = useState(0);
 
-    useEffect(() => {
-        document.querySelectorAll(".question").forEach(el => {
-            el.addEventListener("click", (e) => {
-                e.currentTarget.classList.toggle(styles.show);
-                setTimeout(() => {
-                    window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' })
-                }, 100);
-            })
-        })
-    }, [])
-
+    const toggleAccordion = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+    };
 
     return (
-        <Container id="preguntas-frecuentes" className={styles.root}>
-            <Text xxxl>Preguntas frecuentes</Text>
-            <div className={`${styles.questionWrapper} question`}>
-                <div className={styles.question}>
-                    <Text xl>¿Cuáles son vuestros precios?</Text>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" className="css-15d17o1"><path d="M15 10l-9 5V5l9 5z"></path></svg>
+        <section className={styles.wrapper}>
+            <Container id="preguntas-frecuentes" large={true}>
+                <div className={styles.header}>
+                    <p className={styles.badge}>FAQ</p>
+                    <H2 title className={styles.title}>Preguntas Frecuentes</H2>
                 </div>
-                <div className={`${styles.answer} answer`}>
-                    <Text></Text>
-                </div>
-            </div>
-            <div className={`${styles.questionWrapper} question`}>
-                <div className={styles.question}>
-                    <Text xl>¿Dónde puedo ver ejemplos de vuestro trabajo?</Text>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" className="css-15d17o1"><path d="M15 10l-9 5V5l9 5z"></path></svg>
-                </div>
-                <div className={`${styles.answer} answer`}>
-                    <Text>Aquí. <Link href="/bocetos">Ejemplos de nuestros diseños</Link></Text>
-                </div>
-            </div>
 
-        </Container>
+                <div className={styles.accordion}>
+                    {faqItems.map((item, index) => (
+                        <div 
+                            key={index} 
+                            className={`${styles.item} ${activeIndex === index ? styles.active : ''}`}
+                            onClick={() => toggleAccordion(index)}
+                        >
+                            <div className={styles.questionLine}>
+                                <h3 className={styles.question}>{item.question}</h3>
+                                <HiPlus className={styles.icon} />
+                            </div>
+                            <div className={styles.answerWrapper}>
+                                <p className={styles.answer}>{item.answer}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </Container>
+        </section>
     )
 }
