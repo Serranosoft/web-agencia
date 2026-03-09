@@ -1,0 +1,7 @@
+﻿commit 61bf07403fe7693ba8bb9cbf9bde48dc1b87bb79
+Author: Paula Quintana <paulaquintanagon00@gmail.com>
+Date:   Mon Mar 9 19:40:40 2026 +0100
+
+    Fix CSS module ambiguous selector parsing error for Vercel build
+
+src/styles/blog/[slug].module.scss

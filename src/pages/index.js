@@ -8,7 +8,7 @@ import SeoCharts from '@/home/charts/seo-charts'
 import Roadmap from '@/home/roadmap/roadmap'
 import Floating from '@/components/contact/floating'
 import Rocket from '@/home/rocket/rocket'
-import Designs from '@/home/designs/designs'
+
 import Faq from '@/home/faq/faq'
 import Contact from '@/home/contact/contact'
 import Footer from '@/components/footer/footer'
@@ -61,7 +61,7 @@ export default function Home() {
             <SeoCharts />
             <Roadmap />
             <Rocket />
-            <Designs />
+
             <Testimonials />
             <CaseStudies />
             <Faq />

@@ -66,28 +66,28 @@ export default function Designs() {
                     <SubHeading>Clica en cada elemento para ver el diseño completo.</SubHeading>
                 </div>
                 <div className={styles.group}>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(https://api.kaoos.es/wp-content/uploads/2023/06/section5.png)" }}></div>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(https://api.kaoos.es/wp-content/uploads/2023/06/section1.png)" }}></div>
-                    <video className={`${styles.item} item`} src="https://api.kaoos.es/wp-content/uploads/2023/06/dragsa-2.mp4" autoPlay loop muted />
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(https://api.kaoos.es/wp-content/uploads/2023/06/section6.png)" }}></div>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
+                    <video className={`${styles.item} item`} src="/dragsa-old.mp4" autoPlay loop muted />
+                    <div className={`${styles.item} item`}></div>
                 </div>
 
                 <Bento />
 
                 <div className={styles.group}>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(https://api.kaoos.es/wp-content/uploads/2023/06/section9.png)" }}></div>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(https://api.kaoos.es/wp-content/uploads/2023/06/section8.png)" }}></div>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(https://api.kaoos.es/wp-content/uploads/2023/06/section7.png)" }}></div>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(https://api.kaoos.es/wp-content/uploads/2023/06/section11.png)" }}></div>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
                 </div>
 
                 <Stack />
 
                 <div className={styles.group}>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(https://api.kaoos.es/wp-content/uploads/2023/06/section4-2.png)" }}></div>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(https://api.kaoos.es/wp-content/uploads/2023/06/section12.png)" }}></div>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(https://api.kaoos.es/wp-content/uploads/2023/06/section2.png)" }}></div>
-                    <div className={`${styles.item} item`} style={{ backgroundImage: "url(https://api.kaoos.es/wp-content/uploads/2023/06/section3.png)" }}></div>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
                 </div>
             </Container>
 

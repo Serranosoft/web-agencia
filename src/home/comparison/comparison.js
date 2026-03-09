@@ -33,10 +33,10 @@ export default function Comparison() {
                 <H2 title>Te ayudamos a impulsar tu negocio con resultados reales</H2>
                 <div className={`${styles.comparison}`}>
                     <div className={styles.before}>
-                        <img src="https://api.kaoos.es/wp-content/uploads/2023/06/before.jpg" />
+                        <img src="" />
                     </div>
                     <div className={`${styles.after} afterImage`}>
-                        <img src="https://api.kaoos.es/wp-content/uploads/2023/06/after.jpg" />
+                        <img src="" />
                     </div>
                 </div>
             </div>

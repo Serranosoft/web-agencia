@@ -20,14 +20,14 @@ export default function Seo() {
                         <Text xl>Ya sea que sea nuevo en SEO o quiera aprender estrategias avanzadas, este es su centro de conocimiento de SEO.</Text>
                         <Button href="/centro/seo" highlight>Empezar ahora</Button>
                     </div>
-                    <img src="https://api.kaoos.es/wp-content/uploads/2023/06/seo-hub.png" alt="marketing-seo" />
+                    <img src="" alt="marketing-seo" />
                 </div>
 
                 <div className={styles.content}>
                     <div className={styles.box}>
                         <Link href="/centro/seo">
                             <Text xxl kanit>Iniciación en SEO</Text>
-                            <img src="https://api.kaoos.es/wp-content/uploads/2023/06/seo-fundamentals.png" alt="seo-fundamentals" />
+                            <img src="" alt="seo-fundamentals" />
                         </Link>
                         <div className={styles.index}>
                             <div className={styles.summary}>
