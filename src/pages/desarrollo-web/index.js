@@ -91,6 +91,7 @@ export default function Designs() {
                     <div className={extraStyles.projectGrid}>
                         <div className={extraStyles.projectCard}>
                             <div className={extraStyles.imageBox} style={{ background: '#f8ead2' }}>
+                                <img src="/debocado.png" alt="E-commerce Pro" />
                             </div>
                             <div className={extraStyles.projectInfo}>
                                 <h3>E-commerce Pro</h3>
@@ -99,7 +100,7 @@ export default function Designs() {
                         </div>
                         <div className={extraStyles.projectCard}>
                             <div className={extraStyles.imageBox} style={{ background: '#22c1db' }}>
-                                <img src="/dragsa-old.mp4" style={{ objectFit: 'cover', opacity: 0.1 }} onError={(e) => e.target.style.display = 'none'} />
+                                <img src="/datasync.png" alt="SaaS Innovador" />
                             </div>
                             <div className={extraStyles.projectInfo}>
                                 <h3>SaaS Innovador</h3>
@@ -108,6 +109,7 @@ export default function Designs() {
                         </div>
                         <div className={extraStyles.projectCard}>
                             <div className={extraStyles.imageBox} style={{ background: '#a0cdba' }}>
+                                <img src="/humancopy.png" alt="HealthConnect" />
                             </div>
                             <div className={extraStyles.projectInfo}>
                                 <h3>HealthConnect</h3>
@@ -130,15 +132,19 @@ export default function Designs() {
                     
                     <div className={extraStyles.sectorGrid}>
                         <Link href="/contacto" className={extraStyles.sectorCard}>
+                            <img src="/pomtoy.png" alt="E-commerce" />
                             <h3 className={extraStyles.sectorTitle}>E-commerce</h3>
                         </Link>
                         <Link href="/contacto" className={extraStyles.sectorCard}>
+                            <img src="/luxefurniture.png" alt="Bienes Raíces" />
                             <h3 className={extraStyles.sectorTitle}>Bienes Raíces</h3>
                         </Link>
                         <Link href="/contacto" className={extraStyles.sectorCard}>
+                            <img src="/eye2.jpg" alt="Salud" />
                             <h3 className={extraStyles.sectorTitle}>Salud</h3>
                         </Link>
                         <Link href="/contacto" className={extraStyles.sectorCard}>
+                            <img src="/crypto-experto.png" alt="Tecnología" />
                             <h3 className={extraStyles.sectorTitle}>Tecnología</h3>
                         </Link>
                     </div>
