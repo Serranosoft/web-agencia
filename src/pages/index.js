@@ -4,6 +4,7 @@ import Hero from '@/home/hero/hero'
 import Capabilities from '@/home/capabilities/capabilities'
 import Testimonials from '@/home/testimonials/testimonials'
 import SeoCharts from '@/home/charts/seo-charts'
+import Roadmap from '@/home/roadmap/roadmap'
 import Floating from '@/components/contact/floating'
 import Rocket from '@/home/rocket/rocket'
 import Designs from '@/home/designs/designs'
@@ -55,6 +56,7 @@ export default function Home() {
             <Hero />
             <Capabilities />
             <SeoCharts />
+            <Roadmap />
             <Rocket />
             <Designs />
             <Testimonials />
