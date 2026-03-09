@@ -5,13 +5,13 @@ import { HiArrowUpRight } from 'react-icons/hi2'
 
 const projects = [
     {
-        category: "E-Commerce",
-        title: "Debocado Rediseño Completo",
+        category: "SEO & Desarrollo web",
+        title: "Diseño completo y creación de contenido",
         image: "/debocado.png"
     },
     {
-        category: "Copywriting",
-        title: "HumanCopy Web Experience",
+        category: "Copywriting & Desarrollo",
+        title: "Desarrollo y diseño íntegro de la página web",
         image: "/humancopy.png"
     }
 ]
@@ -24,7 +24,7 @@ export default function CaseStudies() {
                     <p className={styles.badge}>CASE STUDIES</p>
                     <H2 title className={styles.title}>Probando el valor a través de resultados.</H2>
                 </div>
-                
+
                 <div className={styles.grid}>
                     {projects.map((project, index) => (
                         <div key={index} className={styles.card}>
