@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/home/home.module.scss'
 import Hero from '@/home/hero/hero'
+import Capabilities from '@/home/capabilities/capabilities'
 import Testimonials from '@/home/testimonials/testimonials'
 import SeoCharts from '@/home/charts/seo-charts'
 import Floating from '@/components/contact/floating'
@@ -52,6 +53,7 @@ export default function Home() {
             <Aos />
             <Floating />
             <Hero />
+            <Capabilities />
             <SeoCharts />
             <Rocket />
             <Designs />
