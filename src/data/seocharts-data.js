@@ -32,7 +32,7 @@ export const chartInfo2 = {
     total_views: "20.193.401",
     total_clicks: "3.795.415",
     total_impressions: "56M",
-    color: "#FFC0CB",
+    color: "#F5CD79",
     description: "Gran cantidad de tráfico orgánico en poco tiempo, posicionando líderes en los primeros 6 meses de trabajo. Proyecto de 3 años que ha pasado por varias migraciones.",
     data: [
         { name: '01/2024', visitas: 368879 },
