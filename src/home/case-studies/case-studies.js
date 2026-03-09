@@ -10,9 +10,9 @@ const projects = [
         image: "/debocado.png"
     },
     {
-        category: "SaaS",
-        title: "DataSync SEO Dominance",
-        image: "/datasync.png"
+        category: "Copywriting",
+        title: "HumanCopy Web Experience",
+        image: "/humancopy.png"
     }
 ]
 
