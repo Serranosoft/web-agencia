@@ -3,6 +3,7 @@ import styles from '@/styles/home/home.module.scss'
 import Hero from '@/home/hero/hero'
 import Capabilities from '@/home/capabilities/capabilities'
 import Testimonials from '@/home/testimonials/testimonials'
+import CaseStudies from '@/home/case-studies/case-studies'
 import SeoCharts from '@/home/charts/seo-charts'
 import Roadmap from '@/home/roadmap/roadmap'
 import Floating from '@/components/contact/floating'
@@ -62,6 +63,7 @@ export default function Home() {
             <Rocket />
             <Designs />
             <Testimonials />
+            <CaseStudies />
             <Faq />
             <Contact />
             <Footer />

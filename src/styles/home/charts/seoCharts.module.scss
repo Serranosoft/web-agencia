@@ -1,6 +1,9 @@
 .root {
-    margin: 5rem 0;
+    margin: 5rem auto;
+    width: 100%;
+    max-width: 1350px;
     padding: 0 1rem;
+
     .columns {
         display: flex;
         flex-direction: column;
