@@ -62,40 +62,24 @@ export default function Designs() {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
             </Head>
-            <Container fullscreen className={styles.root}>
-                <div className={styles.bg}></div>
-                <div className={styles.header}>
-                    <H1 title kanit>Casos de éxito</H1>
-                    <SubHeading>Clica en cada elemento para ver el diseño completo.</SubHeading>
-                </div>
-                <div className={styles.group}>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
-                    <video className={`${styles.item} item`} src="/dragsa-old.mp4" autoPlay loop muted />
-                    <div className={`${styles.item} item`}></div>
-                </div>
 
-                <Bento />
-
-                <div className={styles.group}>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
-                </div>
-
-                <Stack />
-
-                <div className={styles.group}>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
-                    <div className={`${styles.item} item`}></div>
-                </div>
-            </Container>
+            {/* Main Hero Section */}
+            <section className={extraStyles.heroWrapper}>
+                <Container large>
+                    <div className={extraStyles.heroContent}>
+                        <H1 title kanit className={extraStyles.heroTitle}>Nuestro Portafolio</H1>
+                        <p className={extraStyles.heroDesc}>
+                            Soluciones digitales innovadoras que impulsan el crecimiento de tu negocio a través de diseño estratégico y tecnología de vanguardia.
+                        </p>
+                        <Link href="#proyectos" className={extraStyles.btnYellow}>
+                            Ver Proyectos Recientes
+                        </Link>
+                    </div>
+                </Container>
+            </section>
 
             {/* Featured Projects Section */}
-            <section className={extraStyles.wrapper}>
+            <section id="proyectos" className={extraStyles.wrapper}>
                 <Container large>
                     <div className={extraStyles.featuredHeader}>
                         <h2 className={extraStyles.title}>Proyectos Destacados</h2>
@@ -160,6 +144,39 @@ export default function Designs() {
                     </div>
                 </Container>
             </section>
+
+            {/* Interactive GSAP Grids */}
+            <Container fullscreen className={styles.root} style={{ padding: '8rem 1rem' }}>
+                <div className={styles.bg}></div>
+                <div className={styles.header}>
+                    <H1 title kanit style={{ color: "white" }}>Bocetos e Interacción</H1>
+                    <SubHeading style={{ color: "rgba(255, 255, 255, 0.7)" }}>Clica en cada elemento para ver el diseño a pantalla completa.</SubHeading>
+                </div>
+                <div className={styles.group}>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
+                    <video className={`${styles.item} item`} src="/dragsa-old.mp4" autoPlay loop muted />
+                    <div className={`${styles.item} item`}></div>
+                </div>
+
+                <Bento />
+
+                <div className={styles.group}>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
+                </div>
+
+                <Stack />
+
+                <div className={styles.group}>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
+                    <div className={`${styles.item} item`}></div>
+                </div>
+            </Container>
 
             {/* CTA Section */}
             <section className={extraStyles.yellowWrapper}>
