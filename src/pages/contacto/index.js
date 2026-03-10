@@ -4,6 +4,7 @@ import Aos from "@/components/aos/aos";
 import Footer from "@/components/footer/footer";
 import H1 from "@/components/content/h1";
 import H2 from "@/components/content/h2";
+import H3 from "@/components/content/h3";
 import Link from "next/link";
 import { FiMail, FiPhone, FiMapPin, FiShare2, FiGlobe, FiFacebook, FiInstagram } from "react-icons/fi";
 import styles from "@/styles/contacto/contacto.module.scss";
@@ -37,27 +38,27 @@ export default function Contacto() {
                                     <div className={styles.iconWrapper}>
                                         <FiMail />
                                     </div>
-                                    <h3>Email</h3>
+                                    <H3 className={styles.infoTitle}>Email</H3>
                                     <p>hola@agenciadigital.com</p>
                                 </div>
                                 <div className={styles.infoItem}>
                                     <div className={styles.iconWrapper}>
                                         <FiPhone />
                                     </div>
-                                    <h3>Teléfono</h3>
+                                    <H3 className={styles.infoTitle}>Teléfono</H3>
                                     <p>+34 912 345 678</p>
                                 </div>
                                 <div className={`${styles.infoItem} ${styles.infoRow}`}>
                                     <div className={styles.iconWrapper}>
                                         <FiMapPin />
                                     </div>
-                                    <h3>Dirección</h3>
+                                    <H3 className={styles.infoTitle}>Dirección</H3>
                                     <p>Calle Innovación 123, 28001 Madrid, España</p>
                                 </div>
                             </div>
                             
                             <div className={styles.socials}>
-                                <h3>SÍGUENOS</h3>
+                                <H3 className={styles.socialTitle}>SÍGUENOS</H3>
                                 <div className={styles.socialIcons}>
                                     <a href="#" aria-label="Share">
                                         <FiShare2 />

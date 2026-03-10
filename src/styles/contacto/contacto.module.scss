@@ -25,7 +25,11 @@
 }
 
 .headerTitle {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 900;
     color: $charcoal;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
 }
 
 
@@ -82,7 +86,7 @@
         font-size: 1.25rem;
     }
 
-    h3 {
+    .infoTitle {
         font-size: 1rem;
         font-weight: 800;
         color: $charcoal;
@@ -98,7 +102,7 @@
 }
 
 .socials {
-    h3 {
+    .socialTitle {
         font-size: 0.85rem;
         font-weight: 700;
         color: rgba($charcoal, 0.5);
