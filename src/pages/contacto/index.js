@@ -33,17 +33,17 @@ export default function Contacto() {
                                 <div className={styles.infoItem}>
                                     <div className={styles.iconWrapper}><HiMail /></div>
                                     <H3>Email</H3>
-                                    <p>hola@agenciadigital.com</p>
+                                    <p>info@tuwebencadiz.es</p>
                                 </div>
                                 <div className={styles.infoItem}>
                                     <div className={styles.iconWrapper}><HiPhone /></div>
                                     <H3>Teléfono</H3>
-                                    <p>+34 942 242 573</p>
+                                    <p>644 466 492</p>
                                 </div>
                                 <div className={`${styles.infoItem} ${styles.addressCard}`}>
                                     <div className={styles.iconWrapper}><HiLocationMarker /></div>
                                     <H3>Dirección</H3>
-                                    <p>Calle Innovación 123, 28001 Madrid, España</p>
+                                    <p>Puerto Real, Cádiz</p>
                                 </div>
                             </div>
 
