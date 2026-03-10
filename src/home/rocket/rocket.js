@@ -22,13 +22,14 @@ export default function Info1() {
             gsap.to(".gsap-wrapper", { scrollTrigger, duration: 0.5, backgroundColor: "rgba(255, 255, 255, 1)" });
             gsap.to(".gsap-text", { scrollTrigger, color: "#2D3436" });
             gsap.to(".gsap-rocket", { scrollTrigger, y: "-100vh", scale: 0.5 });
-            gsap.to(".header", {
-                scrollTrigger: {
-                    trigger: ".gsap-hide-header-trigger",
-                    start: "center top",
-                    scrub: true,
-                },
-                yPercent: -100
+            ScrollTrigger.create({
+                trigger: ".gsap-wrapper",
+                start: "top top+=100",
+                end: "bottom top",
+                onEnter: () => gsap.to(".header", { yPercent: -100, duration: 0.3 }),
+                onLeave: () => gsap.to(".header", { yPercent: 0, duration: 0.3 }),
+                onEnterBack: () => gsap.to(".header", { yPercent: -100, duration: 0.3 }),
+                onLeaveBack: () => gsap.to(".header", { yPercent: 0, duration: 0.3 }),
             });
 
             return () => ctx.revert();
