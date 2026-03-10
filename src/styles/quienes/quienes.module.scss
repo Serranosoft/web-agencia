@@ -1,0 +1,446 @@
+@import "../colors.scss";
+@import "../components/content/mixins.module.scss";
+
+.wrapper {
+    background: #fdfdfd; // Off-white matching the theme
+    padding: 8rem 0;
+    width: 100%;
+
+    @media (max-width: 968px) {
+        padding: 4rem 0;
+    }
+}
+
+.grayWrapper {
+    background: #fafafa;
+    padding: 8rem 0;
+    width: 100%;
+
+    @media (max-width: 968px) {
+        padding: 4rem 0;
+    }
+}
+
+.yellowWrapper {
+    background: $gold;
+    padding: 8rem 0;
+    width: 100%;
+
+    @media (max-width: 968px) {
+        padding: 4rem 0;
+    }
+}
+
+/* Hero Section */
+.heroContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding-top: 6rem;
+
+    @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+        padding-top: 2rem;
+    }
+}
+
+.heroBadge {
+    display: inline-block;
+    background: rgba($gold, 0.2);
+    color: darken($gold, 15%);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.heroTitle {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: $charcoal;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+
+    span {
+        color: $gold;
+    }
+}
+
+.heroDesc {
+    font-size: 1.15rem;
+    color: rgba($charcoal, 0.7);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.heroButtons {
+    display: flex;
+    gap: 1rem;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
+}
+
+.btnPrimary {
+    background: $gold;
+    color: $charcoal;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+
+    &:hover {
+        background: darken($gold, 10%);
+        transform: translateY(-2px);
+    }
+}
+
+.btnSecondary {
+    background: transparent;
+    color: $charcoal;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    border: 2px solid rgba($charcoal, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+
+    &:hover {
+        background: rgba($charcoal, 0.05);
+        border-color: rgba($charcoal, 0.3);
+    }
+}
+
+.heroImage {
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+}
+
+/* History & Stats Section */
+.historyContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+
+    @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.statCard {
+    background: $white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid rgba($gold, 0.2);
+
+    h3 {
+        font-size: 2.5rem;
+        color: $gold;
+        font-weight: 900;
+        margin: 0 0 0.5rem 0;
+    }
+
+    p {
+        font-size: 0.9rem;
+        color: rgba($charcoal, 0.6);
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin: 0;
+    }
+}
+
+.historyContent {
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: $charcoal;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: rgba($charcoal, 0.7);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* Values Section */
+.sectionHeader {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: $charcoal;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.15rem;
+        color: rgba($charcoal, 0.6);
+        line-height: 1.6;
+    }
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.valueCard {
+    background: $white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    text-align: left;
+
+    .iconWrapper {
+        width: 50px;
+        height: 50px;
+        background: rgba($gold, 0.15);
+        color: $gold;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: $charcoal;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: rgba($charcoal, 0.6);
+        line-height: 1.6;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+}
+
+/* Team Section */
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.teamMember {
+    img {
+        width: 100%;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+
+        &:hover {
+            filter: grayscale(0%);
+        }
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: $charcoal;
+        margin: 0 0 0.25rem 0;
+    }
+
+    p {
+        color: $gold;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        margin: 0;
+    }
+}
+
+/* Culture Section */
+.cultureContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+
+    @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cultureContent {
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: $charcoal;
+        margin-bottom: 2rem;
+    }
+}
+
+.cultureList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cultureItem {
+    display: flex;
+    gap: 1.5rem;
+
+    .number {
+        width: 40px;
+        height: 40px;
+        background: $gold;
+        color: $charcoal;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    .details {
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: $charcoal;
+            margin: 0 0 0.5rem 0;
+        }
+
+        p {
+            color: rgba($charcoal, 0.7);
+            line-height: 1.6;
+            margin: 0;
+        }
+    }
+}
+
+.cultureImage {
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+}
+
+/* CTA Overlay */
+.ctaBox {
+    background: $gold;
+    border-radius: 2rem;
+    padding: 4rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        padding: 3rem 2rem;
+    }
+
+    h2 {
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
+        font-weight: 900;
+        color: $charcoal;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: rgba($charcoal, 0.8);
+        margin-bottom: 2.5rem;
+        max-width: 600px;
+        margin-inline: auto;
+    }
+}
+
+.ctaButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
+}
+
+.btnDark {
+    background: $charcoal;
+    color: $white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: lighten($charcoal, 10%);
+        transform: translateY(-2px);
+    }
+}
+
+.btnOutlineDark {
+    background: transparent;
+    color: $charcoal;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    border: 2px solid $charcoal;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba($charcoal, 0.05);
+    }
+}
