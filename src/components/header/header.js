@@ -56,7 +56,7 @@ export default function Header() {
                 </a>
                 <Link href="/desarrollo-web">Casos de éxito</Link>
                 <Link href="/quienes-somos">Quiénes somos</Link>
-                <Link href="/#preguntas-frecuentes">Preguntas frecuentes</Link>
+                <Link href="/contacto">Contacto</Link>
                 <Button href="https://lxb7f5dwsyt.typeform.com/to/e3ayzUDn">Presupuesto</Button>
             </div>
 
