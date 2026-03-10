@@ -3,117 +3,107 @@ import Container from "@/components/content/container";
 import Aos from "@/components/aos/aos";
 import Footer from "@/components/footer/footer";
 import H1 from "@/components/content/h1";
-import H2 from "@/components/content/h2";
 import H3 from "@/components/content/h3";
-import Link from "next/link";
-import { FiMail, FiPhone, FiMapPin, FiShare2, FiGlobe, FiFacebook, FiInstagram } from "react-icons/fi";
 import styles from "@/styles/contacto/contacto.module.scss";
+import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
+import { FaShareAlt, FaGlobe, FaDiscord } from "react-icons/fa";
 
 export default function Contacto() {
     return (
         <>
             <Aos />
             <Head>
-                <title>Contacta con nosotros - Agencia</title>
-                <meta name="description" content="Estamos listos para llevar tu presencia digital al siguiente nivel. Contacta con nosotros." />
+                <title>Contacto - Agencia</title>
+                <meta name="description" content="Ponte en contacto con nuestro equipo de expertos para llevar tu proyecto al siguiente nivel." />
             </Head>
 
             <section className={styles.wrapper}>
                 <Container large>
-                    {/* Header Section */}
-                    <div className={styles.headerSection}>
-                        <H1 kanit title className={styles.headerTitle}>
-                            Contacta con nosotros
-                        </H1>
-                        <p>
+                    <div className={styles.header}>
+                        <H1 kanit title className={styles.title}>Contacta con nosotros</H1>
+                        <p className={styles.subtitle}>
                             Estamos listos para llevar tu presencia digital al siguiente nivel. Cuéntanos tu proyecto y nuestro equipo de expertos se pondrá en contacto contigo en menos de 24 horas.
                         </p>
                     </div>
 
-                    <div className={styles.gridContainer}>
-                        {/* Left Column - Info & Map */}
+                    <div className={styles.grid}>
+                        {/* Info Column */}
                         <div className={styles.infoColumn}>
-                            <div className={styles.infoGrid}>
+                            <div className={styles.infoCards}>
                                 <div className={styles.infoItem}>
-                                    <div className={styles.iconWrapper}>
-                                        <FiMail />
-                                    </div>
-                                    <H3 className={styles.infoTitle}>Email</H3>
-                                    <p>info@tuwebencadiz.es</p>
+                                    <div className={styles.iconWrapper}><HiMail /></div>
+                                    <H3>Email</H3>
+                                    <p>hola@agenciadigital.com</p>
                                 </div>
                                 <div className={styles.infoItem}>
-                                    <div className={styles.iconWrapper}>
-                                        <FiPhone />
-                                    </div>
-                                    <H3 className={styles.infoTitle}>Teléfono</H3>
-                                    <p>644 466 492</p>
+                                    <div className={styles.iconWrapper}><HiPhone /></div>
+                                    <H3>Teléfono</H3>
+                                    <p>+34 942 242 573</p>
                                 </div>
-                                <div className={`${styles.infoItem} ${styles.infoRow}`}>
-                                    <div className={styles.iconWrapper}>
-                                        <FiMapPin />
-                                    </div>
-                                    <H3 className={styles.infoTitle}>Dirección</H3>
-                                    <p>Puerto Real, Cádiz</p>
-                                </div>
-                            </div>
-                            
-                            <div className={styles.socials}>
-                                <H3 className={styles.socialTitle}>SÍGUENOS</H3>
-                                <div className={styles.socialIcons}>
-                                    <a href="#" aria-label="Share">
-                                        <FiShare2 />
-                                    </a>
-                                    <a href="#" aria-label="Website">
-                                        <FiGlobe />
-                                    </a>
-                                    <a href="#" aria-label="Facebook">
-                                        <FiInstagram />
-                                    </a>
+                                <div className={`${styles.infoItem} ${styles.addressCard}`}>
+                                    <div className={styles.iconWrapper}><HiLocationMarker /></div>
+                                    <H3>Dirección</H3>
+                                    <p>Calle Innovación 123, 28001 Madrid, España</p>
                                 </div>
                             </div>
 
-                            <div className={styles.mapBox}>
+                            <div className={styles.socialSection}>
+                                <p>SÍGUENOS</p>
+                                <div className={styles.socialIcons}>
+                                    <a href="#" aria-label="Compartir"><FaShareAlt /></a>
+                                    <a href="#" aria-label="Web"><FaGlobe /></a>
+                                    <a href="#" aria-label="Discord"><FaDiscord /></a>
+                                </div>
+                            </div>
+
+                            <div className={styles.mapWrapper}>
                                 <img src="/contact-map.png" alt="Mapa de ubicación" />
-                                <a href="https://www.google.com/maps/place/Puerto+Real,+C%C3%A1diz/@36.5278453,-6.2166547,13z" target="_blank" rel="noopener noreferrer" className={styles.mapBtn}>
-                                    <FiMapPin /> Ver en Google Maps
+                                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className={styles.mapButton}>
+                                    <HiLocationMarker />
+                                    Ver en Google Maps
                                 </a>
                             </div>
                         </div>
 
-                        {/* Right Column - Form */}
-                        <div className={styles.formBox}>
-                            <H2 kanit>Envíanos un mensaje</H2>
-                            <form action="#" method="POST" onSubmit={(e) => e.preventDefault()}>
-                                <div className={styles.formGrid}>
+                        {/* Form Column */}
+                        <div className={styles.formColumn}>
+                            <H3>Envíanos un mensaje</H3>
+                            <form className={styles.form} onClick={(e) => e.preventDefault()}>
+                                <div className={styles.formRow}>
                                     <div className={styles.inputGroup}>
-                                        <label htmlFor="nombre">Nombre completo</label>
-                                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required />
-                                    </div>
-                                    <div className={styles.inputGroup}>
-                                        <label htmlFor="email">Email corporativo</label>
-                                        <input type="email" id="email" name="email" placeholder="juan@empresa.com" required />
+                                        <label>Nombre completo</label>
+                                        <input type="text" placeholder="Ej. Juan Pérez" />
                                     </div>
                                     <div className={styles.inputGroup}>
-                                        <label htmlFor="empresa">Empresa</label>
-                                        <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu negocio" />
-                                    </div>
-                                    <div className={styles.inputGroup}>
-                                        <label htmlFor="asunto">Asunto</label>
-                                        <select id="asunto" name="asunto" defaultValue="Desarrollo Web">
-                                            <option value="Desarrollo Web">Desarrollo Web</option>
-                                            <option value="SEO">Auditoría SEO</option>
-                                            <option value="Branding">Branding</option>
-                                            <option value="Otro">Otro proyecto</option>
-                                        </select>
-                                    </div>
-                                    <div className={`${styles.inputGroup} ${styles.full}`}>
-                                        <label htmlFor="mensaje">Mensaje</label>
-                                        <textarea id="mensaje" name="mensaje" placeholder="Hola, me gustaría tener más información para..." required></textarea>
-                                    </div>
-                                    <div className={`${styles.inputGroup} ${styles.full}`}>
-                                        <button type="submit" className={styles.btnSubmit}>Enviar mensaje</button>
+                                        <label>Email corporativo</label>
+                                        <input type="email" placeholder="juan@empresa.com" />
                                     </div>
                                 </div>
+
+                                <div className={styles.formRow}>
+                                    <div className={styles.inputGroup}>
+                                        <label>Empresa</label>
+                                        <input type="text" placeholder="Nombre de tu negocio" />
+                                    </div>
+                                    <div className={styles.inputGroup}>
+                                        <label>Asunto</label>
+                                        <select>
+                                            <option>Desarrollo Web</option>
+                                            <option>Diseño UX/UI</option>
+                                            <option>Marketing</option>
+                                            <option>Otro</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div className={styles.inputGroup}>
+                                    <label>Mensaje</label>
+                                    <textarea placeholder="Cuéntanos en qué te podemos ayudar..."></textarea>
+                                </div>
+
+                                <button type="submit" className={styles.submitBtn}>
+                                    Enviar mensaje
+                                </button>
                             </form>
                         </div>
                     </div>
