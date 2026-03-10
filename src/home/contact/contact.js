@@ -25,7 +25,7 @@ export default function Contact() {
                                 <div className={styles.iconWrapper}>
                                     <HiLocationMarker />
                                 </div>
-                                <span>Cádiz, España</span>
+                                <span>Puerto Real, Cádiz</span>
                             </div>
                         </div>
                     </div>
