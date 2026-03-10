@@ -59,7 +59,7 @@ export default function QuienesSomos() {
                 <Container large>
                     <div className={styles.heroContainer}>
                         <div className={styles.heroContent}>
-                            <div className={styles.heroBadge}>Sobre Nosotros</div>
+                            <div className={styles.heroBadge}><span></span> Sobre Nosotros</div>
                             <h1 className={styles.heroTitle}>
                                 Transformamos ideas en <span>experiencias digitales</span> memorables
                             </h1>
