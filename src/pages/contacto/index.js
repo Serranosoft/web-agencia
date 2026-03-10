@@ -39,21 +39,21 @@ export default function Contacto() {
                                         <FiMail />
                                     </div>
                                     <H3 className={styles.infoTitle}>Email</H3>
-                                    <p>hola@agenciadigital.com</p>
+                                    <p>info@tuwebencadiz.es</p>
                                 </div>
                                 <div className={styles.infoItem}>
                                     <div className={styles.iconWrapper}>
                                         <FiPhone />
                                     </div>
                                     <H3 className={styles.infoTitle}>Teléfono</H3>
-                                    <p>+34 912 345 678</p>
+                                    <p>644 466 492</p>
                                 </div>
                                 <div className={`${styles.infoItem} ${styles.infoRow}`}>
                                     <div className={styles.iconWrapper}>
                                         <FiMapPin />
                                     </div>
                                     <H3 className={styles.infoTitle}>Dirección</H3>
-                                    <p>Calle Innovación 123, 28001 Madrid, España</p>
+                                    <p>Puerto Real, Cádiz</p>
                                 </div>
                             </div>
                             
@@ -74,7 +74,7 @@ export default function Contacto() {
 
                             <div className={styles.mapBox}>
                                 <img src="/contact-map.png" alt="Mapa de ubicación" />
-                                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className={styles.mapBtn}>
+                                <a href="https://www.google.com/maps/place/Puerto+Real,+C%C3%A1diz/@36.5278453,-6.2166547,13z" target="_blank" rel="noopener noreferrer" className={styles.mapBtn}>
                                     <FiMapPin /> Ver en Google Maps
                                 </a>
                             </div>

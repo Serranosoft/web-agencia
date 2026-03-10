@@ -19,7 +19,7 @@ export default function Contact() {
                                 <div className={styles.iconWrapper}>
                                     <HiMail />
                                 </div>
-                                <span>hola@tuwebencadiz.es</span>
+                                <span>info@tuwebencadiz.es</span>
                             </div>
                             <div className={styles.infoItem}>
                                 <div className={styles.iconWrapper}>
