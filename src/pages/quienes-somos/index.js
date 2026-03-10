@@ -2,6 +2,9 @@ import Head from "next/head";
 import Container from "@/components/content/container";
 import Aos from "@/components/aos/aos";
 import Footer from "@/components/footer/footer";
+import H1 from "@/components/content/h1";
+import H2 from "@/components/content/h2";
+import H3 from "@/components/content/h3";
 import Link from "next/link";
 import styles from "@/styles/quienes/quienes.module.scss";
 import { useEffect, useState, useRef } from "react";
@@ -60,9 +63,9 @@ export default function QuienesSomos() {
                     <div className={styles.heroContainer}>
                         <div className={styles.heroContent}>
                             <div className={styles.heroBadge}><span></span> Sobre Nosotros</div>
-                            <h1 className={styles.heroTitle}>
+                            <H1 kanit title className={styles.heroTitle}>
                                 Transformamos ideas en <span>experiencias digitales</span> memorables
-                            </h1>
+                            </H1>
                             <p className={styles.heroDesc}>
                                 Nuestra misión es potenciar el crecimiento de marcas modernas a través del desarrollo web de vanguardia y marketing estratégico. No solo creamos sitios, construimos el futuro de tu negocio.
                             </p>
@@ -84,24 +87,24 @@ export default function QuienesSomos() {
                     <div className={styles.historyContainer}>
                         <div className={styles.statsGrid}>
                             <div className={styles.statCard}>
-                                <h3><Counter end={10} suffix="+" /></h3>
+                                <H3 className={styles.statCardH3}><Counter end={10} suffix="+" /></H3>
                                 <p>Años de Experiencia</p>
                             </div>
                             <div className={styles.statCard}>
-                                <h3><Counter end={250} suffix="+" /></h3>
+                                <H3 className={styles.statCardH3}><Counter end={250} suffix="+" /></H3>
                                 <p>Proyectos Entregados</p>
                             </div>
                             <div className={styles.statCard}>
-                                <h3><Counter end={15} /></h3>
+                                <H3 className={styles.statCardH3}><Counter end={15} /></H3>
                                 <p>Expertos Creativos</p>
                             </div>
                             <div className={styles.statCard}>
-                                <h3><Counter end={98} suffix="%" /></h3>
+                                <H3 className={styles.statCardH3}><Counter end={98} suffix="%" /></H3>
                                 <p>Clientes Satisfechos</p>
                             </div>
                         </div>
                         <div className={styles.historyContent}>
-                            <h2>Nuestra Historia</h2>
+                            <H2 kanit title className={styles.historyContentH2}>Nuestra Historia</H2>
                             <p>
                                 Fundada con la visión de romper las barreras entre la tecnología y la creatividad, nuestra agencia ha evolucionado de un pequeño estudio de diseño a un referente en soluciones digitales integrales.
                             </p>
@@ -117,29 +120,29 @@ export default function QuienesSomos() {
             <section className={styles.wrapper}>
                 <Container large>
                     <div className={styles.sectionHeader}>
-                        <h2>Nuestros Valores</h2>
+                        <H2 kanit title className={styles.sectionHeaderH2}>Nuestros Valores</H2>
                         <p>El núcleo de todo lo que hacemos se basa en estos pilares fundamentales que guían cada proyecto.</p>
                     </div>
                     
                     <div className={styles.valuesGrid}>
                         <div className={styles.valueCard}>
                             <div className={styles.iconWrapper}>💡</div>
-                            <h3>Innovación</h3>
+                            <H3 className={styles.valueCardH3}>Innovación</H3>
                             <p>Siempre a la vanguardia tecnológica para ofrecer soluciones que hoy parecen del mañana.</p>
                         </div>
                         <div className={styles.valueCard}>
                             <div className={styles.iconWrapper}>🤝</div>
-                            <h3>Compromiso</h3>
+                            <H3 className={styles.valueCardH3}>Compromiso</H3>
                             <p>Tus objetivos son los nuestros. Trabajamos hombro con hombro hasta alcanzar la meta.</p>
                         </div>
                         <div className={styles.valueCard}>
                             <div className={styles.iconWrapper}>🎨</div>
-                            <h3>Creatividad</h3>
+                            <H3 className={styles.valueCardH3}>Creatividad</H3>
                             <p>Buscamos ángulos únicos y diseños que no solo se vean bien, sino que conecten emocionalmente.</p>
                         </div>
                         <div className={styles.valueCard}>
                             <div className={styles.iconWrapper}>📈</div>
-                            <h3>Resultados</h3>
+                            <H3 className={styles.valueCardH3}>Resultados</H3>
                             <p>Ejecutamos con propósito. El éxito se mide en el crecimiento tangible de tu marca.</p>
                         </div>
                     </div>
@@ -150,29 +153,29 @@ export default function QuienesSomos() {
             <section className={styles.grayWrapper}>
                 <Container large>
                     <div className={styles.sectionHeader}>
-                        <h2>El Equipo</h2>
+                        <H2 kanit title className={styles.sectionHeaderH2}>El Equipo</H2>
                         <p>Conoce a las mentes brillantes que darán vida a tu próximo proyecto digital.</p>
                     </div>
                     
                     <div className={styles.teamGrid}>
                         <div className={styles.teamMember}>
                             <img src="/team-carlos.png" alt="Carlos Méndez" />
-                            <h3>Carlos Méndez</h3>
+                            <H3 className={styles.teamMemberH3}>Carlos Méndez</H3>
                             <p>CEO & Founder</p>
                         </div>
                         <div className={styles.teamMember}>
                             <img src="/team-elena.png" alt="Elena Ríos" />
-                            <h3>Elena Ríos</h3>
+                            <H3 className={styles.teamMemberH3}>Elena Ríos</H3>
                             <p>Directora Creativa</p>
                         </div>
                         <div className={styles.teamMember}>
                             <img src="/team-david.png" alt="David Torres" />
-                            <h3>David Torres</h3>
+                            <H3 className={styles.teamMemberH3}>David Torres</H3>
                             <p>Lead Developer</p>
                         </div>
                         <div className={styles.teamMember}>
                             <img src="/team-sofia.png" alt="Sofía López" />
-                            <h3>Sofía López</h3>
+                            <H3 className={styles.teamMemberH3}>Sofía López</H3>
                             <p>Marketing Strategy</p>
                         </div>
                     </div>
@@ -184,26 +187,26 @@ export default function QuienesSomos() {
                 <Container large>
                     <div className={styles.cultureContainer}>
                         <div className={styles.cultureContent}>
-                            <h2>Nuestra Cultura</h2>
+                            <H2 kanit title className={styles.cultureContentH2}>Nuestra Cultura</H2>
                             <div className={styles.cultureList}>
                                 <div className={styles.cultureItem}>
                                     <div className={styles.number}>1</div>
                                     <div className={styles.details}>
-                                        <h3>Colaboración Radical</h3>
+                                        <H3 className={styles.cultureItemH3}>Colaboración Radical</H3>
                                         <p>Creemos que las mejores ideas nacen del intercambio constante entre equipos y clientes.</p>
                                     </div>
                                 </div>
                                 <div className={styles.cultureItem}>
                                     <div className={styles.number}>2</div>
                                     <div className={styles.details}>
-                                        <h3>Aprendizaje Continuo</h3>
+                                        <H3 className={styles.cultureItemH3}>Aprendizaje Continuo</H3>
                                         <p>En el mundo digital, lo único constante es el cambio. Dedicamos tiempo semanal a investigar nuevas tecnologías.</p>
                                     </div>
                                 </div>
                                 <div className={styles.cultureItem}>
                                     <div className={styles.number}>3</div>
                                     <div className={styles.details}>
-                                        <h3>Equilibrio y Pasión</h3>
+                                        <H3 className={styles.cultureItemH3}>Equilibrio y Pasión</H3>
                                         <p>Un equipo motivado y descansado es un equipo creativo. Fomentamos un entorno de trabajo flexible y humano.</p>
                                     </div>
                                 </div>
@@ -220,7 +223,7 @@ export default function QuienesSomos() {
             <section className={styles.wrapper}>
                 <Container large>
                     <div className={styles.ctaBox}>
-                        <h2>¿Listo para impulsar tu presencia digital?</h2>
+                        <H2 kanit title className={styles.ctaBoxH2}>¿Listo para impulsar tu presencia digital?</H2>
                         <p>Estamos listos para escuchar tu idea y convertirla en una realidad tecnológica de éxito.</p>
                         <div className={styles.ctaButtons}>
                             <Link href="/contacto" className={styles.btnDark}>Trabajar con nosotros</Link>
