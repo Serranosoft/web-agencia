@@ -4,6 +4,46 @@ import Aos from "@/components/aos/aos";
 import Footer from "@/components/footer/footer";
 import Link from "next/link";
 import styles from "@/styles/quienes/quienes.module.scss";
+import { useEffect, useState, useRef } from "react";
+
+const Counter = ({ end, suffix = "" }) => {
+    const [count, setCount] = useState(0);
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    const duration = 2000;
+                    const startTime = performance.now();
+
+                    const animate = (currentTime) => {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const easeProgress = 1 - Math.pow(1 - progress, 5); // Ease out quint
+                        
+                        setCount(Math.floor(easeProgress * end));
+
+                        if (progress < 1) {
+                            requestAnimationFrame(animate);
+                        }
+                    };
+                    requestAnimationFrame(animate);
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => observer.disconnect();
+    }, [end]);
+
+    return <span ref={ref}>{count}{suffix}</span>;
+};
 
 export default function QuienesSomos() {
     return (
@@ -44,19 +84,19 @@ export default function QuienesSomos() {
                     <div className={styles.historyContainer}>
                         <div className={styles.statsGrid}>
                             <div className={styles.statCard}>
-                                <h3>10+</h3>
+                                <h3><Counter end={10} suffix="+" /></h3>
                                 <p>Años de Experiencia</p>
                             </div>
                             <div className={styles.statCard}>
-                                <h3>250+</h3>
+                                <h3><Counter end={250} suffix="+" /></h3>
                                 <p>Proyectos Entregados</p>
                             </div>
                             <div className={styles.statCard}>
-                                <h3>15</h3>
+                                <h3><Counter end={15} /></h3>
                                 <p>Expertos Creativos</p>
                             </div>
                             <div className={styles.statCard}>
-                                <h3>98%</h3>
+                                <h3><Counter end={98} suffix="%" /></h3>
                                 <p>Clientes Satisfechos</p>
                             </div>
                         </div>
