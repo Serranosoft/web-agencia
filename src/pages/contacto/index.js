@@ -81,7 +81,7 @@ export default function Contacto() {
 
                         {/* Right Column - Form */}
                         <div className={styles.formBox}>
-                            <H2 kanit title>Envíanos un mensaje</H2>
+                            <H2 kanit>Envíanos un mensaje</H2>
                             <form action="#" method="POST" onSubmit={(e) => e.preventDefault()}>
                                 <div className={styles.formGrid}>
                                     <div className={styles.inputGroup}>
