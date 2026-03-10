@@ -2,12 +2,13 @@
 @import "../components/content/mixins.module.scss";
 
 .wrapper {
-    background: #fafafa;
+    background: #f4f5f7;
     min-height: 100vh;
-    padding: 8rem 0;
+    padding: 8rem 1.5rem;
+    width: 100%;
 
     @media (max-width: 968px) {
-        padding: 4rem 0;
+        padding: 4rem 1rem;
     }
 }
 
@@ -30,8 +31,9 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 5rem;
+    align-items: flex-start;
 
     @media (max-width: 968px) {
         grid-template-columns: 1fr;
@@ -168,10 +170,11 @@
 
 /* Right Column - Form */
 .formColumn {
-    background: $white;
-    padding: 3rem;
+    background: #ffffff;
+    padding: 3.5rem;
     border-radius: 1.5rem;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.04);
+    box-shadow: 0 25px 80px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.04);
     height: fit-content;
 
     h3 {
@@ -211,9 +214,9 @@
         input, select, textarea {
             width: 100%;
             padding: 1rem 1.25rem;
-            border: 1px solid rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.12);
             border-radius: 0.5rem;
-            background: #fdfdfd;
+            background: #ffffff;
             color: $charcoal;
             font-family: inherit;
             font-size: 0.95rem;
