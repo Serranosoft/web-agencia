@@ -32,7 +32,7 @@ export default function QuienesSomos() {
                             </div>
                         </div>
                         <div className={styles.heroImage}>
-                            <img src="/debocado-2.png" alt="Nuestro Equipo colaborando" />
+                            <img src="/hero-team.png" alt="Nuestro Equipo colaborando" />
                         </div>
                     </div>
                 </Container>
@@ -116,22 +116,22 @@ export default function QuienesSomos() {
                     
                     <div className={styles.teamGrid}>
                         <div className={styles.teamMember}>
-                            <img src="/luxefurniture.png" alt="Carlos Méndez" />
+                            <img src="/team-carlos.png" alt="Carlos Méndez" />
                             <h3>Carlos Méndez</h3>
                             <p>CEO & Founder</p>
                         </div>
                         <div className={styles.teamMember}>
-                            <img src="/pomtoy.png" alt="Elena Ríos" />
+                            <img src="/team-elena.png" alt="Elena Ríos" />
                             <h3>Elena Ríos</h3>
                             <p>Directora Creativa</p>
                         </div>
                         <div className={styles.teamMember}>
-                            <img src="/datasync.png" alt="David Torres" />
+                            <img src="/team-david.png" alt="David Torres" />
                             <h3>David Torres</h3>
                             <p>Lead Developer</p>
                         </div>
                         <div className={styles.teamMember}>
-                            <img src="/humancopy.png" alt="Sofía López" />
+                            <img src="/team-sofia.png" alt="Sofía López" />
                             <h3>Sofía López</h3>
                             <p>Marketing Strategy</p>
                         </div>
@@ -170,7 +170,7 @@ export default function QuienesSomos() {
                             </div>
                         </div>
                         <div className={styles.cultureImage}>
-                            <img src="/eye2.jpg" alt="Interior de la oficina" />
+                            <img src="/culture-office.png" alt="Interior de la oficina" />
                         </div>
                     </div>
                 </Container>
