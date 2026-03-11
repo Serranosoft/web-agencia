@@ -7,8 +7,41 @@ import H3 from "@/components/content/h3";
 import styles from "@/styles/contacto/contacto.module.scss";
 import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
 import { FaShareAlt, FaGlobe, FaDiscord } from "react-icons/fa";
+import { useState } from "react";
 
 export default function Contacto() {
+    const [status, setStatus] = useState('idle');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('loading');
+
+        const formData = {
+            nombre: e.target.nombre.value,
+            email: e.target.email.value,
+            empresa: e.target.empresa.value,
+            asunto: e.target.asunto.value,
+            mensaje: e.target.mensaje.value,
+        };
+
+        try {
+            const response = await fetch('/api/contacto', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                e.target.reset();
+                setTimeout(() => setStatus('idle'), 4000);
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            setStatus('error');
+        }
+    };
     return (
         <>
             <Aos />
@@ -68,42 +101,43 @@ export default function Contacto() {
                         {/* Form Column */}
                         <div className={styles.formColumn}>
                             <H3>Envíanos un mensaje</H3>
-                            <form className={styles.form} onClick={(e) => e.preventDefault()}>
+                            <form className={styles.form} onSubmit={handleSubmit}>
                                 <div className={styles.formRow}>
                                     <div className={styles.inputGroup}>
                                         <label>Nombre completo</label>
-                                        <input type="text" placeholder="Ej. Juan Pérez" />
+                                        <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required />
                                     </div>
                                     <div className={styles.inputGroup}>
                                         <label>Email corporativo</label>
-                                        <input type="email" placeholder="juan@empresa.com" />
+                                        <input type="email" name="email" placeholder="juan@empresa.com" required />
                                     </div>
                                 </div>
 
                                 <div className={styles.formRow}>
                                     <div className={styles.inputGroup}>
                                         <label>Empresa</label>
-                                        <input type="text" placeholder="Nombre de tu negocio" />
+                                        <input type="text" name="empresa" placeholder="Nombre de tu negocio" />
                                     </div>
                                     <div className={styles.inputGroup}>
                                         <label>Asunto</label>
-                                        <select>
-                                            <option>Desarrollo Web</option>
-                                            <option>Diseño UX/UI</option>
-                                            <option>Marketing</option>
-                                            <option>Otro</option>
+                                        <select name="asunto">
+                                            <option value="Desarrollo Web">Desarrollo Web</option>
+                                            <option value="Diseño UX/UI">Diseño UX/UI</option>
+                                            <option value="Marketing">Marketing</option>
+                                            <option value="Otro">Otro</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div className={styles.inputGroup}>
                                     <label>Mensaje</label>
-                                    <textarea placeholder="Cuéntanos en qué te podemos ayudar..."></textarea>
+                                    <textarea name="mensaje" placeholder="Cuéntanos en qué te podemos ayudar..." required></textarea>
                                 </div>
 
-                                <button type="submit" className={styles.submitBtn}>
-                                    Enviar mensaje
+                                <button type="submit" className={styles.submitBtn} disabled={status === 'loading'}>
+                                    {status === 'loading' ? 'Enviando...' : status === 'success' ? '¡Mensaje Enviado!' : 'Enviar mensaje'}
                                 </button>
+                                {status === 'error' && <p style={{ color: 'red', fontSize: '0.9rem', marginTop: '1rem', textAlign: 'center' }}>Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo.</p>}
                             </form>
                         </div>
                     </div>
