@@ -1,0 +1,451 @@
+@import "../colors.scss";
+
+// Reusing global styles where possible, structure from mockup.
+
+.wrapper {
+    background: #fdfdfd; // very light background
+    padding-bottom: 4rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+}
+
+// Hero
+.heroContainer {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .badgeLabel {
+        color: $gold;
+        font-weight: 700;
+        font-size: 0.9rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    .title {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        
+        .highlight {
+            color: $gold;
+        }
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+
+    .btnGroup {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+// Grid
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 6rem;
+
+    @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.serviceCard {
+    background: #f7f8f9;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    }
+
+    .cardHeader {
+        .iconBox {
+            width: 50px;
+            height: 50px;
+            background: $gold;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            
+            svg {
+                fill: $charcoal;
+                width: 24px;
+                height: 24px;
+            }
+        }
+        
+        .cardTitle {
+            margin-bottom: 0.5rem;
+        }
+        
+        p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    }
+
+    .featuresList {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #444;
+
+            .checkIcon {
+                color: $gold;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    .imgWrapper {
+        margin-top: auto;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        height: 250px;
+        position: relative;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+// Dark Results section
+.resultsDarkSector {
+    background: #111418;
+    color: white;
+    padding: 5rem 0;
+    margin-bottom: 4rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+
+    .resultsGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+
+        @media (max-width: 968px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .resultsText {
+        .resultsHeading {
+            color: white;
+            font-size: clamp(2rem, 3vw, 2.5rem);
+            margin-bottom: 1.5rem;
+            
+            .highlightYellow {
+                color: $gold;
+            }
+        }
+
+        & > p {
+            color: #aaa;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+        }
+
+        .statsGrid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+            .statItem {
+                h2 {
+                    color: $gold;
+                    font-size: clamp(2rem, 3vw, 2.5rem);
+                    margin-bottom: 0.2rem;
+                }
+                p {
+                    font-size: 0.8rem;
+                    letter-spacing: 0.1em;
+                    font-weight: bold;
+                    color: #ddd;
+                }
+            }
+        }
+    }
+
+    .resultsImageWrapper {
+        border-radius: 1rem;
+        overflow: hidden;
+        height: 100%;
+        max-height: 500px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+
+// Pricing
+.pricingSection {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.pricingTitle {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.pricingSubtitle {
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.pricingGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.priceCard {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+
+    &.highlightedPlan {
+        border-color: $gold;
+        box-shadow: 0 20px 40px rgba(255,184,0,0.15);
+        transform: scale(1.03);
+        z-index: 10;
+
+        @media (max-width: 1024px) {
+            transform: none;
+        }
+    }
+
+    .recomendedBadge {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $gold;
+        color: $charcoal;
+        font-size: 0.75rem;
+        font-weight: bold;
+        padding: 0.3rem 1rem;
+        border-radius: 1rem;
+        letter-spacing: 0.1em;
+    }
+
+    .planName {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .planPrice {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        
+        span {
+            color: #888;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            line-height: 1;
+            margin: 0;
+        }
+    }
+
+    .planFeatures {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2.5rem;
+        flex-grow: 1;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            border-bottom: 1px solid #f5f5f5;
+            padding: 1rem 0;
+            color: #555;
+            font-size: 0.95rem;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .checkIcon {
+                color: $gold;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    .priceBtnWrapper {
+        a, button {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+// FAQ block
+.faqSector {
+    padding: 5rem 0;
+    
+    .faqTitle {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+    }
+
+    .faqAccordion {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .faqItem {
+        background: white;
+        border: 1px solid #eee;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .faqTop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .faqQuestion {
+                font-size: 1.1rem;
+                margin: 0;
+            }
+
+            .chevronIcon {
+                font-size: 1.5rem;
+                color: $gold;
+                transition: transform 0.3s ease;
+            }
+        }
+
+        .faqAnswer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            p {
+                margin: 0;
+                padding-top: 1rem;
+                color: #555;
+                line-height: 1.6;
+            }
+        }
+
+        &.active {
+            border-color: #ddd;
+            
+            .chevronIcon {
+                transform: rotate(180deg);
+            }
+            .faqAnswer {
+                max-height: 500px;
+            }
+        }
+    }
+}
+
+// Bottom CTA
+.ctaBottomWrapper {
+    margin-top: 2rem;
+    .ctaBox {
+        background: $gold;
+        border-radius: 1.5rem;
+        padding: 4rem 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+
+        .ctaBoxH2 {
+            color: $charcoal;
+            font-size: clamp(2rem, 3vw, 2.5rem);
+            max-width: 600px;
+        }
+
+        p {
+            color: rgba(45, 52, 54, 0.8);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        a {
+            background-color: $charcoal !important;
+            color: white !important;
+        }
+    }
+}

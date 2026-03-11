@@ -5,11 +5,11 @@
     top: 0;
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
-    padding: 1rem clamp(1rem, 1rem + 3vw, 5rem);
+    gap: 1rem;
+    padding: 1rem clamp(1rem, 1rem + 2vw, 3rem);
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
@@ -66,6 +66,7 @@
             font-size: clamp(1.20rem, 0.15vw + 1.1rem, 1.27rem);
             font-weight: bold;
             color: #636e72;
+            white-space: nowrap;
             transition: color 0.1s;         
             &:hover {
                 color: #2D3436;
