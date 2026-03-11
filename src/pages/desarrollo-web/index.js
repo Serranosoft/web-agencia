@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import styles from "@/styles/designs/designs.module.scss";
 import Container from "@/components/content/container";
 import Head from "next/head";
@@ -12,6 +12,60 @@ import Link from "next/link";
 import Footer from "@/components/footer/footer";
 
 export default function Designs() {
+
+    const SECTORS_PER_PAGE = 8;
+    const allSectors = [
+        { icon: '🏠', label: 'Administración de Propiedades' },
+        { icon: '🌴', label: 'Agencia de Alquiler Vacacional' },
+        { icon: '🚗', label: 'Autoescuela' },
+        { icon: '🍺', label: 'Bar / Pub / Coctelería' },
+        { icon: '✂️', label: 'Barbería' },
+        { icon: '☕', label: 'Cafetería' },
+        { icon: '🥩', label: 'Carnicería' },
+        { icon: '💅', label: 'Centro de Estética' },
+        { icon: '🩺', label: 'Centro de Salud y Bienestar' },
+        { icon: '🧘', label: 'Centro de Yoga' },
+        { icon: '🏥', label: 'Clínica Ambulatoria' },
+        { icon: '🦷', label: 'Clínica Dental / Dentista' },
+        { icon: '💆', label: 'Clínica de Fisioterapia' },
+        { icon: '🏓', label: 'Club de Pádel / Centro Deportivo' },
+        { icon: '🎵', label: 'Club Nocturno' },
+        { icon: '📋', label: 'Copistería / Papelería' },
+        { icon: '💊', label: 'Farmacia' },
+        { icon: '🔧', label: 'Ferretería' },
+        { icon: '🌸', label: 'Floristería' },
+        { icon: '🍎', label: 'Frutería' },
+        { icon: '💪', label: 'Gimnasio' },
+        { icon: '🍦', label: 'Heladería' },
+        { icon: '💍', label: 'Joyería' },
+        { icon: '📚', label: 'Librería' },
+        { icon: '🦞', label: 'Marisquería' },
+        { icon: '🛒', label: 'Mercado / Supermercado' },
+        { icon: '🥐', label: 'Panadería / Pastelería' },
+        { icon: '💈', label: 'Peluquería' },
+        { icon: '🌹', label: 'Perfumería' },
+        { icon: '🐟', label: 'Pescadería' },
+        { icon: '🎓', label: 'Residencia de Estudiantes' },
+        { icon: '🍽️', label: 'Restaurante' },
+        { icon: '🏠', label: 'Asistencia Sanitaria Domiciliaria' },
+        { icon: '🔩', label: 'Taller Mecánico' },
+        { icon: '🏡', label: 'Tienda de Artículos para el Hogar' },
+        { icon: '⚽', label: 'Tienda de Deportes' },
+        { icon: '📷', label: 'Tienda de Fotografía' },
+        { icon: '🍬', label: 'Tienda de Golosinas' },
+        { icon: '👙', label: 'Tienda de Lencería' },
+        { icon: '👗', label: 'Tienda de Moda / Ropa' },
+        { icon: '🚘', label: 'Tienda de Repuestos' },
+        { icon: '🎁', label: 'Tienda de Regalos' },
+        { icon: '🐾', label: 'Veterinario' },
+        { icon: '👟', label: 'Zapatería' },
+    ];
+    const totalPages = Math.ceil(allSectors.length / SECTORS_PER_PAGE);
+    const [sectorPage, setSectorPage] = useState(0);
+    const visibleSectors = allSectors.slice(
+        sectorPage * SECTORS_PER_PAGE,
+        sectorPage * SECTORS_PER_PAGE + SECTORS_PER_PAGE
+    );
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -66,7 +120,10 @@ export default function Designs() {
             <section className={extraStyles.heroWrapper}>
                 <Container large>
                     <div className={extraStyles.heroContent}>
-                        <H1 title kanit className={extraStyles.heroTitle}>Nuestro Portafolio</H1>
+                        <div className={extraStyles.heroBadge}><span></span> Casos de Éxito</div>
+                        <H1 title kanit className={extraStyles.heroTitle}>
+                            Nuestros <span>Proyectos</span>
+                        </H1>
                         <p className={extraStyles.heroDesc}>
                             Soluciones digitales innovadoras que impulsan el crecimiento de tu negocio a través de diseño estratégico y tecnología de vanguardia.
                         </p>
@@ -118,48 +175,53 @@ export default function Designs() {
                     <div className={extraStyles.sectorsHeader}>
                         <div className={extraStyles.sectorsTitleWrapper}>
                             <H2 kanit title>Sectores de especialización</H2>
-                            <div className={extraStyles.controls}>
-                                <button>&lt;</button>
-                                <button className={extraStyles.active}>&gt;</button>
-                            </div>
                         </div>
                         <p className={extraStyles.desc}>
                             Experiencia profunda en verticales clave para entregar resultados que importan en tu industria.
                         </p>
                     </div>
-                    
+
                     <div className={extraStyles.sectorGrid}>
-                        <Link href="/contacto" className={extraStyles.sectorCard}>
-                            <img src="/pomtoy.png" alt="E-commerce" />
-                            <h3 className={extraStyles.sectorTitle}>E-commerce</h3>
-                        </Link>
-                        <Link href="/contacto" className={extraStyles.sectorCard}>
-                            <img src="/luxefurniture.png" alt="Inmobiliaria" />
-                            <h3 className={extraStyles.sectorTitle}>Inmobiliaria</h3>
-                        </Link>
-                        <Link href="/contacto" className={extraStyles.sectorCard}>
-                            <img src="/eye2.jpg" alt="Salud" />
-                            <h3 className={extraStyles.sectorTitle}>Salud & Clínica</h3>
-                        </Link>
-                        <Link href="/contacto" className={extraStyles.sectorCard}>
-                            <img src="/crypto-experto.png" alt="Tecnología" />
-                            <h3 className={extraStyles.sectorTitle}>Tecnología</h3>
-                        </Link>
-                        <Link href="/contacto" className={extraStyles.sectorCard}>
-                            <img src="/debocado.png" alt="Restauración" />
-                            <h3 className={extraStyles.sectorTitle}>Restauración</h3>
-                        </Link>
-                        <Link href="/contacto" className={extraStyles.sectorCard}>
-                            <img src="/datasync.png" alt="SaaS" />
-                            <h3 className={extraStyles.sectorTitle}>SaaS & Software</h3>
-                        </Link>
+                        {visibleSectors.map((sector, i) => (
+                            <Link key={i} href="/contacto" className={extraStyles.sectorCard}>
+                                <span className={extraStyles.sectorIcon}>{sector.icon}</span>
+                                <h3 className={extraStyles.sectorTitle}>{sector.label}</h3>
+                            </Link>
+                        ))}
+                    </div>
+
+                    {/* Pagination nav */}
+                    <div className={extraStyles.sectorNav}>
+                        <button
+                            className={`${extraStyles.navBtn} ${sectorPage > 0 ? extraStyles.navBtnActive : ''}`}
+                            onClick={() => setSectorPage(p => Math.max(0, p - 1))}
+                            disabled={sectorPage === 0}
+                            aria-label="Anterior"
+                        >&#8592;</button>
+
+                        <div className={extraStyles.sectorDots}>
+                            {Array.from({ length: totalPages }).map((_, i) => (
+                                <button
+                                    key={i}
+                                    className={`${extraStyles.dot} ${i === sectorPage ? extraStyles.dotActive : ''}`}
+                                    onClick={() => setSectorPage(i)}
+                                    aria-label={`Página ${i + 1}`}
+                                />
+                            ))}
+                        </div>
+
+                        <button
+                            className={`${extraStyles.navBtn} ${sectorPage < totalPages - 1 ? extraStyles.navBtnActive : ''}`}
+                            onClick={() => setSectorPage(p => Math.min(totalPages - 1, p + 1))}
+                            disabled={sectorPage >= totalPages - 1}
+                            aria-label="Siguiente"
+                        >&#8594;</button>
                     </div>
                 </Container>
             </section>
 
             {/* Interactive GSAP Grids */}
             <Container fullscreen className={styles.root} style={{ padding: '4rem 1rem 8rem 1rem' }}>
-                <div className={styles.bg}></div>
                 <div className={styles.header}>
                     <H2 title kanit style={{ color: "white" }}>Experiencia y Diseño Interactivo</H2>
                     <SubHeading style={{ color: "rgba(255, 255, 255, 0.7)" }}>Clica en cada elemento para ver el diseño a pantalla completa.</SubHeading>
@@ -199,7 +261,7 @@ export default function Designs() {
                     </div>
                 </Container>
             </section>
-            
+
             <Footer />
         </>
     )

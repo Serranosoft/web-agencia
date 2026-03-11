@@ -46,7 +46,7 @@ export default function Servicios() {
                 {/* Hero Section */}
                 <Container large className={styles.heroContainer}>
                     <div className={styles.hero}>
-                        <p className={styles.badgeLabel}>SERVICIOS Y PLANES</p>
+                        <div className={styles.heroBadge}><span></span> Servicios y Planes</div>
                         <H1 kanit title className={styles.title}>
                             Soluciones Digitales<br/>
                             que <span className={styles.highlight}>Impulsan</span> tu<br/>

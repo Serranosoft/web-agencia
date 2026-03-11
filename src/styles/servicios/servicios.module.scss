@@ -12,8 +12,8 @@
 
 // Hero
 .heroContainer {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
+    padding-top: 10rem;
+    padding-bottom: 6rem;
     text-align: center;
 }
 .hero {
@@ -23,17 +23,34 @@
     max-width: 800px;
     margin: 0 auto;
 
-    .badgeLabel {
-        color: $gold;
-        font-weight: 700;
+    .heroBadge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: rgba($gold, 0.15);
+        color: darken($gold, 15%);
+        padding: 0.5rem 1.2rem;
+        border-radius: 5rem;
         font-size: 0.9rem;
-        letter-spacing: 0.1em;
+        font-weight: 700;
+        margin-bottom: 2rem;
         text-transform: uppercase;
-        margin-bottom: 1rem;
+        letter-spacing: 1px;
+
+        span {
+            width: 8px;
+            height: 8px;
+            background: $gold;
+            border-radius: 50%;
+            display: block;
+            box-shadow: 0 0 10px rgba($gold, 0.5);
+        }
     }
 
     .title {
-        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        font-size: clamp(3rem, 5vw, 4.5rem);
+        font-weight: 900;
+        color: $charcoal;
         line-height: 1.1;
         margin-bottom: 1.5rem;
         
