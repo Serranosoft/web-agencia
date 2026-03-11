@@ -57,8 +57,8 @@ export default function Servicios() {
                             ingeniería de software de alta calidad con estrategias de marketing orientadas al ROI.
                         </p>
                         <div className={styles.btnGroup}>
-                            <Button href="#servicios">Explorar Servicios</Button>
-                            <Button white href="#faq">Ver Preguntas</Button>
+                            <Button highlight to="/contacto">Pedir Presupuesto</Button>
+                            <Button darkOutline to="/desarrollo-web">Ver Proyectos</Button>
                         </div>
                     </div>
                 </Container>
