@@ -10,55 +10,77 @@ import Aos from "@/components/aos/aos";
 import extraStyles from "@/styles/designs/extra.module.scss";
 import Link from "next/link";
 import Footer from "@/components/footer/footer";
+import {
+    HiOutlineHome, HiOutlineSun,
+    HiOutlineScissors, HiOutlineShoppingBag, HiOutlineSparkles,
+    HiOutlineHeart, HiOutlineFire,
+    HiOutlineAcademicCap, HiOutlineGift
+} from 'react-icons/hi';
+import {
+    BiCar, BiDumbbell, BiDiamond, BiBeer, BiCoffee,
+    BiCut, BiFootball, BiPrinter,
+    BiWrench, BiBook,
+    BiCartAlt, BiBaguette, BiCamera, BiLogoApple
+} from 'react-icons/bi';
+import {
+    MdOutlineSpa, MdOutlinePets, MdOutlineLocalHospital, MdOutlineNightlife,
+    MdOutlineLocalGroceryStore, MdOutlineLocalPharmacy, MdOutlineHardware,
+    MdOutlineSportsTennis, MdOutlineDirectionsCar,
+    MdOutlineMedicalServices, MdOutlineLiquor, MdOutlineLocalFlorist,
+    MdOutlineStorefront, MdOutlineCardGiftcard
+} from 'react-icons/md';
+import { TbDental, TbMassage, TbToolsKitchen2, TbShoe, TbIceCream2, TbFish, TbShirt } from 'react-icons/tb';
+import { FiKey } from 'react-icons/fi';
+import { GiShrimp } from 'react-icons/gi';
 
 export default function Designs() {
 
     const SECTORS_PER_PAGE = 8;
     const allSectors = [
-        { icon: '🏠', label: 'Administración de Propiedades' },
-        { icon: '🌴', label: 'Agencia de Alquiler Vacacional' },
-        { icon: '🚗', label: 'Autoescuela' },
-        { icon: '🍺', label: 'Bar / Pub / Coctelería' },
-        { icon: '✂️', label: 'Barbería' },
-        { icon: '☕', label: 'Cafetería' },
-        { icon: '🥩', label: 'Carnicería' },
-        { icon: '💅', label: 'Centro de Estética' },
-        { icon: '🩺', label: 'Centro de Salud y Bienestar' },
-        { icon: '🧘', label: 'Centro de Yoga' },
-        { icon: '🏥', label: 'Clínica Ambulatoria' },
-        { icon: '🦷', label: 'Clínica Dental / Dentista' },
-        { icon: '💆', label: 'Clínica de Fisioterapia' },
-        { icon: '🏓', label: 'Club de Pádel / Centro Deportivo' },
-        { icon: '🎵', label: 'Club Nocturno' },
-        { icon: '📋', label: 'Copistería / Papelería' },
-        { icon: '💊', label: 'Farmacia' },
-        { icon: '🔧', label: 'Ferretería' },
-        { icon: '🌸', label: 'Floristería' },
-        { icon: '🍎', label: 'Frutería' },
-        { icon: '💪', label: 'Gimnasio' },
-        { icon: '🍦', label: 'Heladería' },
-        { icon: '💍', label: 'Joyería' },
-        { icon: '📚', label: 'Librería' },
-        { icon: '🦞', label: 'Marisquería' },
-        { icon: '🛒', label: 'Mercado / Supermercado' },
-        { icon: '🥐', label: 'Panadería / Pastelería' },
-        { icon: '💈', label: 'Peluquería' },
-        { icon: '🌹', label: 'Perfumería' },
-        { icon: '🐟', label: 'Pescadería' },
-        { icon: '🎓', label: 'Residencia de Estudiantes' },
-        { icon: '🍽️', label: 'Restaurante' },
-        { icon: '🏠', label: 'Asistencia Sanitaria Domiciliaria' },
-        { icon: '🔩', label: 'Taller Mecánico' },
-        { icon: '🏡', label: 'Tienda de Artículos para el Hogar' },
-        { icon: '⚽', label: 'Tienda de Deportes' },
-        { icon: '📷', label: 'Tienda de Fotografía' },
-        { icon: '🍬', label: 'Tienda de Golosinas' },
-        { icon: '👙', label: 'Tienda de Lencería' },
-        { icon: '👗', label: 'Tienda de Moda / Ropa' },
-        { icon: '🚘', label: 'Tienda de Repuestos' },
-        { icon: '🎁', label: 'Tienda de Regalos' },
-        { icon: '🐾', label: 'Veterinario' },
-        { icon: '👟', label: 'Zapatería' },
+        { Icon: FiKey,                     label: 'Administración de Propiedades' },
+        { Icon: HiOutlineSun,              label: 'Agencia de Alquiler Vacacional' },
+        { Icon: BiCar,                     label: 'Autoescuela' },
+        { Icon: BiBeer,                    label: 'Bar / Pub / Coctelería' },
+        { Icon: BiCut,                     label: 'Barbería' },
+        { Icon: BiCoffee,                  label: 'Cafetería' },
+        { Icon: HiOutlineShoppingBag,      label: 'Carnicería' },
+        { Icon: MdOutlineSpa,              label: 'Centro de Estética' },
+        { Icon: HiOutlineHeart,            label: 'Centro de Salud y Bienestar' },
+        { Icon: HiOutlineFire,             label: 'Centro de Yoga' },
+        { Icon: MdOutlineLocalHospital,    label: 'Clínica Ambulatoria' },
+        { Icon: TbDental,                  label: 'Clínica Dental / Dentista' },
+        { Icon: TbMassage,                 label: 'Clínica de Fisioterapia' },
+        { Icon: MdOutlineSportsTennis,     label: 'Club de Pádel / Centro Deportivo' },
+        { Icon: MdOutlineNightlife,        label: 'Club Nocturno' },
+        { Icon: BiPrinter,                 label: 'Copistería / Papelería' },
+        { Icon: MdOutlineLocalPharmacy,    label: 'Farmacia' },
+        { Icon: MdOutlineHardware,         label: 'Ferretería' },
+        { Icon: MdOutlineLocalFlorist,     label: 'Floristería' },
+        { Icon: BiLogoApple,               label: 'Frutería' },
+        { Icon: BiDumbbell,                label: 'Gimnasio' },
+        { Icon: TbIceCream2,               label: 'Heladería' },
+        { Icon: BiDiamond,                 label: 'Joyería' },
+        { Icon: BiBook,                    label: 'Librería' },
+        { Icon: GiShrimp,                  label: 'Marisquería' },
+        { Icon: MdOutlineLocalGroceryStore,label: 'Mercado / Supermercado' },
+        { Icon: BiBaguette,                label: 'Panadería / Pastelería' },
+        { Icon: HiOutlineScissors,         label: 'Peluquería' },
+        { Icon: HiOutlineSparkles,         label: 'Perfumería' },
+        { Icon: TbFish,                    label: 'Pescadería' },
+        { Icon: HiOutlineAcademicCap,      label: 'Residencia de Estudiantes' },
+        { Icon: TbToolsKitchen2,           label: 'Restaurante' },
+        { Icon: MdOutlineMedicalServices,  label: 'Asistencia Sanitaria Domiciliaria' },
+        { Icon: BiWrench,                  label: 'Taller Mecánico' },
+        { Icon: HiOutlineHome,             label: 'Tienda de Artículos para el Hogar' },
+        { Icon: BiFootball,                label: 'Tienda de Deportes' },
+        { Icon: BiCamera,                  label: 'Tienda de Fotografía' },
+        { Icon: MdOutlineLiquor,           label: 'Tienda de Golosinas' },
+        { Icon: TbShirt,                   label: 'Tienda de Lencería' },
+        { Icon: TbShirt,                   label: 'Tienda de Moda / Ropa' },
+        { Icon: MdOutlineDirectionsCar,    label: 'Tienda de Repuestos' },
+        { Icon: MdOutlineCardGiftcard,     label: 'Tienda de Regalos' },
+        { Icon: MdOutlinePets,             label: 'Veterinario' },
+        { Icon: TbShoe,                    label: 'Zapatería' },
     ];
     const totalPages = Math.ceil(allSectors.length / SECTORS_PER_PAGE);
     const [sectorPage, setSectorPage] = useState(0);
@@ -183,10 +205,12 @@ export default function Designs() {
 
                     <div className={extraStyles.sectorGrid}>
                         {visibleSectors.map((sector, i) => (
-                            <Link key={i} href="/contacto" className={extraStyles.sectorCard}>
-                                <span className={extraStyles.sectorIcon}>{sector.icon}</span>
+                            <div key={i} className={extraStyles.sectorCard}>
+                                <span className={extraStyles.sectorIcon}>
+                                    <sector.Icon size={26} />
+                                </span>
                                 <h3 className={extraStyles.sectorTitle}>{sector.label}</h3>
-                            </Link>
+                            </div>
                         ))}
                     </div>
 

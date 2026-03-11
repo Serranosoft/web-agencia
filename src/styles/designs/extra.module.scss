@@ -260,7 +260,7 @@
         border: 1.5px solid rgba($charcoal, 0.08);
         background: $white;
         padding: 1.5rem 1.25rem;
-        text-decoration: none;
+        cursor: default;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -279,9 +279,6 @@
         }
 
         .sectorIcon {
-            font-size: 2rem;
-            line-height: 1;
-            display: block;
             width: 52px;
             height: 52px;
             background: rgba($gold, 0.12);
@@ -289,6 +286,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            color: darken($gold, 10%);
+            flex-shrink: 0;
         }
 
         .sectorTitle {
