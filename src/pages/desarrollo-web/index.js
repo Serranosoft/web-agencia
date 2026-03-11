@@ -3,9 +3,9 @@ import styles from "@/styles/designs/designs.module.scss";
 import Container from "@/components/content/container";
 import Head from "next/head";
 import H1 from "@/components/content/h1";
+import H2 from "@/components/content/h2";
 import Text from "@/components/content/text";
 import SubHeading from "@/components/content/subheading";
-import Stack from "@/designs/stack";
 import Aos from "@/components/aos/aos";
 import extraStyles from "@/styles/designs/extra.module.scss";
 import Link from "next/link";
@@ -70,9 +70,6 @@ export default function Designs() {
                         <p className={extraStyles.heroDesc}>
                             Soluciones digitales innovadoras que impulsan el crecimiento de tu negocio a través de diseño estratégico y tecnología de vanguardia.
                         </p>
-                        <Link href="#proyectos" className={extraStyles.btnYellow}>
-                            Ver Proyectos Recientes
-                        </Link>
                     </div>
                 </Container>
             </section>
@@ -81,11 +78,7 @@ export default function Designs() {
             <section id="proyectos" className={extraStyles.wrapper}>
                 <Container large>
                     <div className={extraStyles.featuredHeader}>
-                        <h2 className={extraStyles.title}>Proyectos Destacados</h2>
-                        <div className={extraStyles.controls}>
-                            <button>&lt;</button>
-                            <button className={extraStyles.active}>&gt;</button>
-                        </div>
+                        <H2 kanit title>Proyectos Destacados</H2>
                     </div>
                     <div className={extraStyles.projectGrid}>
                         <div className={extraStyles.projectCard}>
@@ -123,7 +116,13 @@ export default function Designs() {
             <section className={extraStyles.grayWrapper}>
                 <Container large>
                     <div className={extraStyles.sectorsHeader}>
-                        <h2 className={extraStyles.title}>Sectores en los que nos especializamos</h2>
+                        <div className={extraStyles.sectorsTitleWrapper}>
+                            <H2 kanit title>Sectores de especialización</H2>
+                            <div className={extraStyles.controls}>
+                                <button>&lt;</button>
+                                <button className={extraStyles.active}>&gt;</button>
+                            </div>
+                        </div>
                         <p className={extraStyles.desc}>
                             Experiencia profunda en verticales clave para entregar resultados que importan en tu industria.
                         </p>
@@ -135,16 +134,24 @@ export default function Designs() {
                             <h3 className={extraStyles.sectorTitle}>E-commerce</h3>
                         </Link>
                         <Link href="/contacto" className={extraStyles.sectorCard}>
-                            <img src="/luxefurniture.png" alt="Bienes Raíces" />
-                            <h3 className={extraStyles.sectorTitle}>Bienes Raíces</h3>
+                            <img src="/luxefurniture.png" alt="Inmobiliaria" />
+                            <h3 className={extraStyles.sectorTitle}>Inmobiliaria</h3>
                         </Link>
                         <Link href="/contacto" className={extraStyles.sectorCard}>
                             <img src="/eye2.jpg" alt="Salud" />
-                            <h3 className={extraStyles.sectorTitle}>Salud</h3>
+                            <h3 className={extraStyles.sectorTitle}>Salud & Clínica</h3>
                         </Link>
                         <Link href="/contacto" className={extraStyles.sectorCard}>
                             <img src="/crypto-experto.png" alt="Tecnología" />
                             <h3 className={extraStyles.sectorTitle}>Tecnología</h3>
+                        </Link>
+                        <Link href="/contacto" className={extraStyles.sectorCard}>
+                            <img src="/debocado.png" alt="Restauración" />
+                            <h3 className={extraStyles.sectorTitle}>Restauración</h3>
+                        </Link>
+                        <Link href="/contacto" className={extraStyles.sectorCard}>
+                            <img src="/datasync.png" alt="SaaS" />
+                            <h3 className={extraStyles.sectorTitle}>SaaS & Software</h3>
                         </Link>
                     </div>
                 </Container>
@@ -154,7 +161,7 @@ export default function Designs() {
             <Container fullscreen className={styles.root} style={{ padding: '4rem 1rem 8rem 1rem' }}>
                 <div className={styles.bg}></div>
                 <div className={styles.header}>
-                    <H1 title kanit style={{ color: "white" }}>Bocetos e Interacción</H1>
+                    <H2 title kanit style={{ color: "white" }}>Experiencia y Diseño Interactivo</H2>
                     <SubHeading style={{ color: "rgba(255, 255, 255, 0.7)" }}>Clica en cada elemento para ver el diseño a pantalla completa.</SubHeading>
                 </div>
                 <div className={styles.group}>
@@ -171,8 +178,6 @@ export default function Designs() {
                     <div className={`${styles.item} item`} style={{ backgroundImage: "url(/hero-mockup.png)" }}></div>
                     <div className={`${styles.item} item`} style={{ backgroundImage: "url(/luxefurniture.png)" }}></div>
                 </div>
-
-                <Stack />
             </Container>
 
             {/* CTA Section */}
