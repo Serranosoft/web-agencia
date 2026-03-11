@@ -73,12 +73,12 @@
             }
         }
 
-        button {
+        .mobileBtn {
             display: none;
         }
     }
 
-    button {
+    .desktopBtn {
         font-size: inherit;
     }
 }
@@ -134,10 +134,14 @@
                 }
             }
 
-            button {
+            .mobileBtn {
                 display: block;
                 margin-top: 1rem;
             }
+        }
+
+        & > .desktopBtn {
+            display: none;
         }
     }
 }

@@ -58,10 +58,10 @@ export default function Header() {
                 <Link href="/quienes-somos">Quiénes somos</Link>
                 <Link href="/servicios">Servicios</Link>
                 <Link href="/contacto">Contacto</Link>
-                <Button target="_blank" to="https://form.typeform.com/to/vFA7yHtZ">Presupuesto</Button>
+                <Button className={styles.mobileBtn} target="_blank" to="https://form.typeform.com/to/vFA7yHtZ">Presupuesto</Button>
             </div>
 
-            <Button target="_blank" to="https://form.typeform.com/to/vFA7yHtZ">Presupuesto</Button>
+            <Button className={styles.desktopBtn} target="_blank" to="https://form.typeform.com/to/vFA7yHtZ">Presupuesto</Button>
 
         </header>
     )
