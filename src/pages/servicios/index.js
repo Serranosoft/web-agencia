@@ -57,7 +57,7 @@ export default function Servicios() {
                             ingeniería de software de alta calidad con estrategias de marketing orientadas al ROI.
                         </p>
                         <div className={styles.btnGroup}>
-                            <Button highlight to="/contacto">Pedir Presupuesto</Button>
+                            <Button highlight target="_blank" to="https://form.typeform.com/to/vFA7yHtZ">Pedir Presupuesto</Button>
                             <Button darkOutline to="/desarrollo-web">Ver Proyectos</Button>
                         </div>
                     </div>
