@@ -10,6 +10,7 @@ import styles from "@/styles/servicios/servicios.module.scss";
 import { HiCode, HiTrendingUp, HiUserGroup, HiColorSwatch, HiCheck, HiChevronDown } from "react-icons/hi";
 import { useState } from "react";
 import CtaSection from "@/components/cta-section/cta-section";
+import Faq from "@/home/faq/faq";
 
 const faqItems = [
     {
@@ -27,11 +28,6 @@ const faqItems = [
 ];
 
 export default function Servicios() {
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    const toggleAccordion = (index) => {
-        setActiveIndex(activeIndex === index ? null : index);
-    };
 
     return (
         <>
@@ -178,29 +174,7 @@ export default function Servicios() {
 
 
                 {/* FAQ Block */}
-                <div className={styles.faqSector} id="faq">
-                    <Container large>
-                        <H2 kanit title className={styles.faqTitle}>Preguntas Frecuentes</H2>
-                        
-                        <div className={styles.faqAccordion}>
-                            {faqItems.map((item, index) => (
-                                <div 
-                                    key={index} 
-                                    className={`${styles.faqItem} ${activeIndex === index ? styles.active : ''}`}
-                                    onClick={() => toggleAccordion(index)}
-                                >
-                                    <div className={styles.faqTop}>
-                                        <H3 kanit className={styles.faqQuestion}>{item.question}</H3>
-                                        <HiChevronDown className={styles.chevronIcon} />
-                                    </div>
-                                    <div className={styles.faqAnswer}>
-                                        <p>{item.answer}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </Container>
-                </div>
+                <Faq items={faqItems} title="Preguntas Frecuentes" badge="SERVICIOS" />
 
                 {/* Bottom CTA */}
                 <CtaSection

@@ -4,7 +4,7 @@ import styles from "@/styles/home/faq/faq.module.scss"
 import { useState } from "react";
 import { HiPlus } from "react-icons/hi";
 
-const faqItems = [
+const defaultFaqItems = [
     {
         question: "¿Cuánto tiempo dura el desarrollo de una web?",
         answer: "La mayoría de los proyectos web sencillos duran unas dos semanas, dependiendo de la complejidad y las integraciones de terceros requeridas."
@@ -19,7 +19,11 @@ const faqItems = [
     }
 ]
 
-export default function Faq() {
+export default function Faq({ 
+    items = defaultFaqItems, 
+    title = "Preguntas Frecuentes", 
+    badge = "FAQ" 
+}) {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const toggleAccordion = (index) => {
@@ -30,12 +34,12 @@ export default function Faq() {
         <section className={styles.wrapper}>
             <Container id="preguntas-frecuentes" large={true}>
                 <div className={styles.header}>
-                    <p className={styles.badge}>FAQ</p>
-                    <H2 title className={styles.title}>Preguntas Frecuentes</H2>
+                    <p className={styles.badge}>{badge}</p>
+                    <H2 title className={styles.title}>{title}</H2>
                 </div>
 
                 <div className={styles.accordion}>
-                    {faqItems.map((item, index) => (
+                    {items.map((item, index) => (
                         <div 
                             key={index} 
                             className={`${styles.item} ${activeIndex === index ? styles.active : ''}`}
