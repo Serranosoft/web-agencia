@@ -8,8 +8,8 @@ import H3 from "@/components/content/h3";
 import Button from "@/components/content/button";
 import styles from "@/styles/servicios/servicios.module.scss";
 import { HiCode, HiTrendingUp, HiUserGroup, HiColorSwatch, HiCheck, HiChevronDown } from "react-icons/hi";
-
 import { useState } from "react";
+import CtaSection from "@/components/cta-section/cta-section";
 
 const faqItems = [
     {
@@ -175,70 +175,7 @@ export default function Servicios() {
 
 
 
-                {/* Pricing Section */}
-                <Container large className={styles.pricingSection}>
-                    <H2 kanit title className={styles.pricingTitle}>Paquetes de Servicios</H2>
-                    <p className={styles.pricingSubtitle}>Soluciones escalables a tu fase de crecimiento. Evita sorpresas.</p>
 
-                    <div className={styles.pricingGrid}>
-                        {/* Plan 1 */}
-                        <div className={styles.priceCard}>
-                            <H3 kanit className={styles.planName}>Startup Growth</H3>
-                            <div className={styles.planPrice}>
-                                <span>Desde</span>
-                                <H2 kanit>$1,499</H2>
-                                <span>/mes</span>
-                            </div>
-                            <ul className={styles.planFeatures}>
-                                <li><HiCheck className={styles.checkIcon}/> Landing Page Optimizada</li>
-                                <li><HiCheck className={styles.checkIcon}/> SEO Local & Básico</li>
-                                <li><HiCheck className={styles.checkIcon}/> Gestión de Redes Lite</li>
-                                <li><HiCheck className={styles.checkIcon}/> Reporte de Mensual</li>
-                            </ul>
-                            <div className={styles.priceBtnWrapper}>
-                                <Button white className={styles.fullBtn} href="/contacto">Seleccionar</Button>
-                            </div>
-                        </div>
-
-                        {/* Plan 2 */}
-                        <div className={`${styles.priceCard} ${styles.highlightedPlan}`}>
-                            <div className={styles.recomendedBadge}>RECOMENDADO</div>
-                            <H3 kanit className={styles.planName}>Business Scale</H3>
-                            <div className={styles.planPrice}>
-                                <span>Desde</span>
-                                <H2 kanit>$3,299</H2>
-                                <span>/mes</span>
-                            </div>
-                            <ul className={styles.planFeatures}>
-                                <li><HiCheck className={styles.checkIcon}/> Web App/E-commerce</li>
-                                <li><HiCheck className={styles.checkIcon}/> Estrategia SEO Full-Stack</li>
-                                <li><HiCheck className={styles.checkIcon}/> Google & Social Ads</li>
-                                <li><HiCheck className={styles.checkIcon}/> UX/UI Riesing trimestral</li>
-                                <li><HiCheck className={styles.checkIcon}/> Soporte Técnico 24/7</li>
-                            </ul>
-                            <div className={styles.priceBtnWrapper}>
-                                <Button className={styles.fullBtn} href="/contacto">Obtener Presupuesto</Button>
-                            </div>
-                        </div>
-
-                        {/* Plan 3 */}
-                        <div className={styles.priceCard}>
-                            <H3 kanit className={styles.planName}>Enterprise</H3>
-                            <div className={styles.planPrice}>
-                                <span>Custom</span>
-                            </div>
-                            <ul className={styles.planFeatures}>
-                                <li><HiCheck className={styles.checkIcon}/> Infraestructura Dedicada</li>
-                                <li><HiCheck className={styles.checkIcon}/> Consultoría de Transformación</li>
-                                <li><HiCheck className={styles.checkIcon}/> Desarrollo de Software a Medida</li>
-                                <li><HiCheck className={styles.checkIcon}/> Account Manager Dedicado</li>
-                            </ul>
-                            <div className={styles.priceBtnWrapper}>
-                                <Button white className={styles.fullBtn} href="/contacto">Contáctanos</Button>
-                            </div>
-                        </div>
-                    </div>
-                </Container>
 
                 {/* FAQ Block */}
                 <div className={styles.faqSector} id="faq">
@@ -266,13 +203,10 @@ export default function Servicios() {
                 </div>
 
                 {/* Bottom CTA */}
-                <Container large className={styles.ctaBottomWrapper}>
-                    <div className={styles.ctaBox}>
-                        <H2 kanit title className={styles.ctaBoxH2}>¿Listo para escalar tu presencia digital?</H2>
-                        <p>Agenda una consultoría estratégica gratuita de 45 minutos y analicemos tus objetivos.</p>
-                        <Button dark href="/contacto">Empezar Ahora</Button>
-                    </div>
-                </Container>
+                <CtaSection
+                    title="¿Listo para escalar tu presencia digital?"
+                    desc="Agenda una consultoría estratégica gratuita de 45 minutos y analicemos tus objetivos."
+                />
 
             </section>
             <Footer />

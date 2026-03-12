@@ -9,6 +9,7 @@ import Link from "next/link";
 import styles from "@/styles/quienes/quienes.module.scss";
 import { useEffect, useState, useRef } from "react";
 import { HiArrowRight, HiLightBulb, HiUserGroup, HiColorSwatch, HiTrendingUp } from "react-icons/hi";
+import CtaSection from "@/components/cta-section/cta-section";
 
 const Counter = ({ end, suffix = "" }) => {
     const [count, setCount] = useState(0);
@@ -232,20 +233,10 @@ export default function QuienesSomos() {
             </section>
 
             {/* CTA Section */}
-            <section className={styles.wrapper}>
-                <Container large>
-                    <div className={styles.ctaBox}>
-                        <H2 kanit title className={styles.ctaBoxH2}>¿Hablamos sobre tu proyecto?</H2>
-                        <p>
-                            Estudiaremos tu proyecto y te diremos qué tipo de web necesita tu negocio y cómo mejorar tu presencia online.<br /><br />
-                            <HiArrowRight style={{ color: '#2D3436', marginRight: '5px', verticalAlign: 'middle' }} /> Solicita información sin compromiso y cuéntanos tu idea.
-                        </p>
-                        <div className={styles.ctaButtons}>
-                            <Link href="/contacto" className={styles.btnDark}>Contacta con nosotros</Link>
-                        </div>
-                    </div>
-                </Container>
-            </section>
+            <CtaSection
+                title="¿Hablamos sobre tu proyecto?"
+                desc="Estudiaremos tu proyecto y te diremos qué tipo de web necesita tu negocio y cómo mejorar tu presencia online."
+            />
 
             <Footer />
         </>

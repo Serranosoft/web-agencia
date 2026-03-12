@@ -32,6 +32,7 @@ import {
 import { TbDental, TbMassage, TbToolsKitchen2, TbShoe, TbIceCream2, TbFish, TbShirt } from 'react-icons/tb';
 import { FiKey } from 'react-icons/fi';
 import { GiShrimp } from 'react-icons/gi';
+import CtaSection from "@/components/cta-section/cta-section";
 
 export default function Designs() {
 
@@ -90,6 +91,8 @@ export default function Designs() {
     );
 
     useEffect(() => {
+        if (typeof window === 'undefined' || !window.gsap) return;
+        const gsap = window.gsap;
         const ctx = gsap.context(() => {
             const items = document.querySelectorAll('.item')
 
@@ -267,24 +270,10 @@ export default function Designs() {
             </Container>
 
             {/* CTA Section */}
-            <section className={extraStyles.yellowWrapper}>
-                <Container large>
-                    <div className={extraStyles.ctaContent}>
-                        <h2 className={extraStyles.ctaTitle}>¿Tienes un proyecto en mente?</h2>
-                        <p className={extraStyles.ctaDesc}>
-                            Estamos listos para transformar tus ideas en realidades digitales de alto impacto. Hablemos sobre cómo podemos ayudarte.
-                        </p>
-                        <div className={extraStyles.ctaButtons}>
-                            <Link href="/contacto" className={extraStyles.btnDark}>
-                                Iniciar mi Proyecto
-                            </Link>
-                            <Link href="/contacto" className={extraStyles.btnOutline}>
-                                Agendar una Llamada
-                            </Link>
-                        </div>
-                    </div>
-                </Container>
-            </section>
+            <CtaSection
+                title="¿Tienes un proyecto en mente?"
+                desc="Estamos listos para transformar tus ideas en realidades digitales de alto impacto. Hablemos sobre cómo podemos ayudarte."
+            />
 
             <Footer />
         </>
