@@ -40,15 +40,15 @@ export default function Hero() {
                 <div className={styles.root}>
                     <div className={styles.content}>
                         <div className={styles.badge}>
-                            <span></span>  Talento digital desde el sur
+                            <span></span>  Especialistas en la provincia de Cádiz
                         </div>
                         <H1 kanit title className={styles.mainTitle}>
-                            Acelera tu <br />
-                            <span className={styles.highlight}>Crecimiento Digital</span> <br />
-                            con Precisión.
+                            Diseño web y <br />
+                            <span className={styles.highlight}>marketing digital</span> <br />
+                            en Cádiz para empresas y autónomos
                         </H1>
                         <Text m className={styles.description}>
-                            Diseñamos y construimos experiencias digitales de alto rendimiento que convierten visitantes en defensores de marca. Estrategias basadas en datos para la web moderna.
+                            Creamos páginas web profesionales, tiendas online y estrategias de marketing digital para ayudar a empresas de Cádiz a conseguir más clientes en Internet.
                         </Text>
                         <div className={styles.ctas}>
                             <Button href="/">Lanzar Proyecto</Button>

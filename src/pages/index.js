@@ -18,8 +18,9 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>tuwebencadiz.es — Agencia de Diseño Web & Posicionamiento SEO en Cádiz</title>
-                <meta name="description" content="tuwebencadiz.es es tu agencia en Cádiz especializada en diseño web profesional, desarrollo a medida y posicionamiento SEO para impulsar tu negocio." />
+                <title>Diseño Web en Cádiz | Agencia Web y Marketing Digital</title>
+                <meta name="description" content="Agencia de diseño web en Cádiz especializada en páginas web profesionales, tiendas online y posicionamiento SEO. Impulsa tu negocio en Internet." />
+                <meta name="keywords" content="diseño web Cádiz, agencia diseño web Cádiz, desarrollo web Cádiz, marketing digital Cádiz, crear página web Cádiz, crear página web para empresa en Cádiz, agencia SEO Cádiz, diseño tiendas online Cádiz, empresa desarrollo web Cádiz" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" strategy='beforeInteractive' />
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js" strategy='beforeInteractive' />

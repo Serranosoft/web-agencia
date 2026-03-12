@@ -47,15 +47,13 @@ export default function Info1() {
 
                     <div className={`${styles.columns}`}>
                         <div className="aos-effect3-observer aos-effect3-el">
-                            <Text xxxl className={`${font.className} gsap-text`}>Impulsa tu</Text>
-                            <Text className="gsap-text">En tuwebencadiz.es diseñamos <strong>páginas web únicas y profesionales</strong> adaptadas a tus necesidades reales. </Text>
-                            <Text className="gsap-text">Convertimos tus ideas en una ventana digital que atraiga clientes y genere confianza.</Text>
+                            <Text xxxl className={`${font.className} gsap-text`}>Agencia de diseño web</Text>
+                            <Text className="gsap-text">Trabajamos con empresas de toda la provincia:</Text>
+                            <Text className="gsap-text"><strong>Diseño web en Cádiz, Jerez, El Puerto de Santa María, San Fernando, Chiclana y Puerto Real.</strong></Text>
                         </div>
                         <div className="aos-effect3-observer aos-effect3-el">
-                            <Text xxxl className={`${font.className} gsap-text`}>página web</Text>
-                            <Text className="gsap-text">Creamos una estrategia SEO única según el tipo de negocio con un análisis de mercado y competencia. </Text>
-                            <Text className="gsap-text">Para páginas web ya creadas, <strong>comenzamos con una auditoría SEO</strong> y aplicando soluciones.</Text>
-
+                            <Text xxxl className={`${font.className} gsap-text`}>en la provincia de Cádiz</Text>
+                            <Text className="gsap-text">Si buscas una agencia de diseño web en Cádiz que entienda tu negocio, estaremos encantados de ayudarte.</Text>
                         </div>
                     </div>
 

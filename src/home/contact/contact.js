@@ -41,9 +41,10 @@ export default function Contact() {
             <Container large={true}>
                 <div className={styles.root}>
                     <div className={styles.content}>
-                        <H2 title className={styles.title}>¿Listo para escalar tu presencia digital?</H2>
+                        <H2 title className={styles.title}>¿Necesitas una página web para tu negocio?</H2>
                         <p className={styles.description}>
-                            Reserva una llamada de descubrimiento de 30 minutos para discutir tu proyecto y recibir una auditoría de rendimiento gratuita.
+                            Si quieres mejorar tu presencia online y conseguir más clientes, podemos ayudarte.<br/><br/>
+                            Solicita tu presupuesto de diseño web en Cádiz sin compromiso y estudiaremos tu proyecto.
                         </p>
                         
                         <div className={styles.info}>
@@ -91,7 +92,7 @@ export default function Contact() {
                             </div>
 
                             <button type="submit" className={styles.submitBtn} disabled={status === 'loading'}>
-                                {status === 'loading' ? 'Enviando...' : status === 'success' ? '¡Solicitud Enviada!' : 'Enviar Solicitud'}
+                                {status === 'loading' ? 'Enviando...' : status === 'success' ? '¡Solicitud Enviada!' : 'Solicitar presupuesto'}
                             </button>
                             {status === 'error' && <p style={{ color: 'red', fontSize: '0.9rem', marginTop: '1rem', textAlign: 'center' }}>Hubo un error al enviar tu solicitud.</p>}
                         </form>
