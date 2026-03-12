@@ -21,7 +21,7 @@ export default function CaseStudies() {
         <section className={styles.wrapper}>
             <Container large={true}>
                 <div className={styles.header}>
-                    <p className={styles.badge}>CASE STUDIES</p>
+                    <p className={styles.badge}>CASOS DE ÉXITO</p>
                     <H2 title className={styles.title}>Probando el valor a través de resultados.</H2>
                 </div>
 

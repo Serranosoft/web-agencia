@@ -6,16 +6,16 @@ import { HiPlus } from "react-icons/hi";
 
 const faqItems = [
     {
-        question: "¿Cuánto tiempo toma un proyecto típico?",
-        answer: "La mayoría de los proyectos web a nivel empresarial duran de 8 a 12 semanas, dependiendo de la complejidad y las integraciones de terceros requeridas."
+        question: "¿Cuánto tiempo dura el desarrollo de una web?",
+        answer: "La mayoría de los proyectos web sencillos duran unas dos semanas, dependiendo de la complejidad y las integraciones de terceros requeridas."
     },
     {
-        question: "¿Qué tipo de ROI podemos esperar del SEO?",
-        answer: "El SEO es una inversión a largo plazo. La mayoría de los clientes ven un aumento significativo en el tráfico orgánico y la calidad de los leads entre 4 y 8 meses después de la implementación de la estrategia."
+        question: "¿Qué tipo de resultados podemos esperar del SEO?",
+        answer: "El SEO es una inversión a largo plazo. La mayoría de los clientes ven un aumento significativo en el tráfico orgánico y la calidad de los leads varios meses después de la implementación de la estrategia."
     },
     {
-        question: "¿Trabajan con plataformas CMS headless?",
-        answer: "Sí, nos especializamos en arquitecturas headless utilizando Contentful, Shopify y Sanity, combinados con frameworks de frontend como Next.js."
+        question: "¿Trabajan con plataformas CMS?",
+        answer: "Si, tenemos experiencia con Wordpress, Shopify y otras plataformas. Aunque, nos especializamos más en páginas diseñadas desde 0."
     }
 ]
 

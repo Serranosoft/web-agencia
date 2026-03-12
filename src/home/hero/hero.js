@@ -51,7 +51,7 @@ export default function Hero() {
                             Creamos páginas web profesionales, tiendas online y estrategias de marketing digital para ayudar a empresas de Cádiz a conseguir más clientes en Internet.
                         </Text>
                         <div className={styles.ctas}>
-                            <Button href="/">Lanzar Proyecto</Button>
+                            <Button href="https://form.typeform.com/to/vFA7yHtZ">¡Hablemos!</Button>
                             <Button secondary href="/desarrollo-web">
                                 Ver Nuestro Trabajo <HiArrowRight />
                             </Button>

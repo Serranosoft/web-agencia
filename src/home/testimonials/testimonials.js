@@ -5,19 +5,19 @@ import { FaQuoteLeft } from 'react-icons/fa'
 
 const testimonials = [
     {
-        quote: "tuwebencadiz.es transformó nuestra presencia online por completo. Nuestra tasa de conversión se triplicó en los primeros tres meses tras el lanzamiento de la nueva plataforma.",
-        author: "Sarah Jenkins",
-        position: "CEO, Global Retail Solutions"
+        quote: "Trabajar con Paula y Manuel fue muy sencillo. Nos ayudaron a avanzar como negocio con una página web totalmente nueva. El diseño ha quedado muy bien y tener la carta digital nos facilita el trabajo",
+        author: "Pablo Álvarez",
+        position: "Restaurante"
     },
     {
-        quote: "La estrategia SEO que implementaron fue un rotundo éxito para nosotros. Ahora estamos en el primer puesto para todas nuestras palabras clave principales.",
-        author: "Marcus Thorne",
-        position: "Director de Marketing, TechFlow SaaS"
+        quote: "No manteníamos la página desde que se hizo con el kit digital, los clientes no la utilizaban. Decidimos darle una oportunidad a esta agencia y trabajamos con algunas ideas. El resultado quedó magnifico y pudimos añadir por fin nuestros propios test integrados.",
+        author: "Marcos Ruíz",
+        position: "Autoescuela"
     },
     {
-        quote: "Profesionales, orientados a datos y con una respuesta increíble. No solo construyeron una página web; crearon un motor de ingresos real para nuestro negocio.",
-        author: "Elena Rodriguez",
-        position: "Fundadora, Horizon Venture Group"
+        quote: "Estoy encantada con la nueva página y con la aplicación que me hicieron. Necesitaba una página completa que me ayudara a organizarme y a explicar mejor nuestro centro. Trabajaremos de nuevo con ellos si necesitamos cambiar alguna cosa!",
+        author: "Elena Rodríguez",
+        position: "Centro integral (Fisioterapia, Logopeda y Psicología)"
     }
 ]
 
@@ -26,7 +26,7 @@ export default function Testimonials() {
         <section className={styles.wrapper}>
             <Container large={true}>
                 <div className={styles.header}>
-                    <p className={styles.badge}>TESTIMONIALS</p>
+                    <p className={styles.badge}>TESTIMONIOS</p>
                     <H2 title className={styles.title}>Lo que dicen nuestros clientes</H2>
                 </div>
                 

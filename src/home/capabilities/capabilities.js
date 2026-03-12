@@ -7,21 +7,21 @@ import { HiCode, HiSearch, HiChartBar } from 'react-icons/hi'
 const items = [
     {
         icon: <HiCode />,
-        title: "Diseño web en Cádiz",
-        description: "Diseñamos páginas web profesionales en Cádiz pensadas para transmitir confianza, mejorar la imagen de tu empresa y convertir visitas en clientes. Todas nuestras webs están optimizadas para:",
-        features: ["móviles y tablets", "velocidad de carga", "posicionamiento en Google", "experiencia de usuario"]
+        title: "Diseño Web",
+        description: "Desarrollamos páginas profesionales pensadas para transmitir confianza, mejorar la imagen de tu empresa y convertir visitas en clientes. Todas nuestras webs están optimizadas para:",
+        features: ["Diseño adaptable", "Velocidad de carga", "Posicionamiento en Google", "Experiencia de usuario"]
     },
     {
         icon: <HiChartBar />,
-        title: "Tiendas online",
-        description: "Creamos tiendas online en Cádiz para que puedas vender tus productos o servicios por Internet las 24 horas del día. Diseñamos ecommerce con WooCommerce o Prestashop, integrando:",
-        features: ["pagos online", "gestión de productos", "control de pedidos", "optimización SEO para ecommerce"]
+        title: "Estrategia SEO",
+        description: "Crecimiento de presencia en Google y otros buscadores mediante SEO técnico, estrategia de contenidos e investigación de palabras clave basada en datos reales.",
+        features: ["Análisis de búsqueda semántica", "Investigación de competencia", "Hojas de ruta de contenido", "Dominio de SEO Local"]
     },
     {
         icon: <HiSearch />,
-        title: "Posicionamiento SEO en Cádiz",
-        description: "Si tu web no aparece en Google, tus clientes no te encontrarán. Aplicamos estrategias de SEO local en Cádiz para que tu negocio aparezca cuando los usuarios buscan servicios como:",
-        features: ["diseño web Cádiz", "agencia marketing Cádiz", "tienda online Cádiz", "Nuestro objetivo es ganar visibilidad"]
+        title: "Marketing Digital",
+        description: "Publicidad desde diferentes canales enfocados en resultados rentables. Nos centramos en las ventas y leads, no solo en el tráfico o las impresiones.",
+        features: ["Gestión de Google Ads", "Seguimiento de conversiones", "Visibilidad de la marca", "Estrategias personalizadas"]
     }
 ]
 
@@ -32,14 +32,13 @@ export default function Capabilities() {
                 <div className={styles.header}>
                     <div className={styles.titleArea}>
                         <p className={styles.badge}>AGENCIA EN CÁDIZ</p>
-                        <H2 title className={styles.title}>Somos una agencia especializada en diseño web y marketing digital.</H2>
+                        <H2 title className={styles.title}>Soluciones personalizadas para cada negocio</H2>
                     </div>
                     <div className={styles.descriptionArea}>
                         <Text className={styles.headerDescription}>Ayudamos a empresas, autónomos y negocios locales a mejorar su presencia online mediante páginas web profesionales, tiendas online y estrategias de posicionamiento SEO orientadas a captar clientes.</Text>
-                        <Text className={styles.headerDescription} style={{ marginTop: '1rem' }}>Trabajamos con empresas de toda la provincia de Cádiz: Jerez de la Frontera, El Puerto de Santa María, San Fernando, Chiclana, Puerto Real o Algeciras, ofreciendo soluciones digitales adaptadas a cada negocio.</Text>
                     </div>
                 </div>
-                
+
                 <div className={styles.grid}>
                     {items.map((item, index) => (
                         <div key={index} className={styles.card}>
