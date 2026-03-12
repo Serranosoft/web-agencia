@@ -184,9 +184,11 @@ export default function QuienesSomos() {
             {/* Culture Section */}
             <section className={styles.wrapper}>
                 <Container large>
+                    <div className={styles.sectionHeader} style={{ textAlign: 'left', margin: '0 0 4rem 0' }}>
+                        <H2 kanit title className={styles.sectionHeaderH2}>Nuestra forma de trabajar</H2>
+                    </div>
                     <div className={styles.cultureContainer}>
                         <div className={styles.cultureContent}>
-                            <H2 kanit title className={styles.cultureContentH2}>Nuestra forma de trabajar</H2>
                             <p style={{ marginBottom: '2rem', fontSize: '1.1rem', color: 'rgba(45, 52, 54, 0.8)' }}>
                                 Creemos que una buena página web no empieza con el diseño, sino con entender el negocio del cliente.<br /><br />
                                 Por eso nuestro proceso suele seguir estos pasos:
