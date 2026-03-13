@@ -54,9 +54,9 @@ export default function Header() {
                 <a href="/">
                     <Logo />
                 </a>
+                <Link href="/servicios">Servicios</Link>
                 <Link href="/desarrollo-web">Casos de éxito</Link>
                 <Link href="/quienes-somos">Quiénes somos</Link>
-                <Link href="/servicios">Servicios</Link>
                 <Link href="/contacto">Contacto</Link>
                 <Button className={styles.mobileBtn} target="_blank" href="https://form.typeform.com/to/vFA7yHtZ">Presupuesto</Button>
             </div>
