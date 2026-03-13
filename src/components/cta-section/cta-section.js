@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styles from './cta-section.module.scss'
 import Container from '@/components/content/container'
+import H2 from '@/components/content/h2'
 
 /**
  * Reusable CTA section with gold background box.
@@ -21,7 +22,7 @@ export default function CtaSection({
         <section className={styles.wrapper}>
             <Container large>
                 <div className={styles.ctaBox}>
-                    <h2 className={styles.ctaTitle}>{title}</h2>
+                    <H2 className={styles.ctaTitle}>{title}</H2>
                     <p className={styles.ctaDesc}>{desc}</p>
                     <div className={styles.ctaButtons}>
                         <Link href={btnHref} className={styles.btnDark}>

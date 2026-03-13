@@ -272,7 +272,8 @@ export default function Designs() {
             {/* CTA Section */}
             <CtaSection
                 title="¿Tienes un proyecto en mente?"
-                desc="Estamos listos para transformar tus ideas en realidades digitales de alto impacto. Hablemos sobre cómo podemos ayudarte."
+                desc="Nos encantaría conocer tus ideas y ayudarte a crear la nueva versión de tu negocio. Contacta con nuestro equipo y dejános formar parte de tu proyecto."
+                btnText="Contactar con el equipo"
             />
 
             <Footer />

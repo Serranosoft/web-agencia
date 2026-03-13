@@ -178,8 +178,9 @@ export default function Servicios() {
 
                 {/* Bottom CTA */}
                 <CtaSection
-                    title="¿Listo para escalar tu presencia digital?"
-                    desc="Agenda una consultoría estratégica gratuita de 45 minutos y analicemos tus objetivos."
+                    title="¿Listo para escalar tu negocio?"
+                    desc="Contacta con nosotros para que podamos elegir la mejor estrategia para tu negocio, diseñar una página que se adapte a tus clientes o cubrir las necesidades que tenga tu página actual"
+                    btnText="¡Hablemos!"
                 />
 
             </section>

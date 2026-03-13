@@ -235,7 +235,7 @@ export default function QuienesSomos() {
             {/* CTA Section */}
             <CtaSection
                 title="¿Hablamos sobre tu proyecto?"
-                desc="Estudiaremos tu proyecto y te diremos qué tipo de web necesita tu negocio y cómo mejorar tu presencia online."
+                desc="Cuéntanos los detalles de tu negocio o contacta directamente con nosotros para que podamos trabajar juntos en mejorar e impulsar tu negocio hacia la cima"
             />
 
             <Footer />
