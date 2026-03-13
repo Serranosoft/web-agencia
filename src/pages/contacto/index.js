@@ -52,93 +52,95 @@ export default function Contacto() {
 
             <section className={styles.wrapper}>
                 <Container large>
-                    <div className={styles.header}>
-                        <H1 kanit title className={styles.title}>Contacta con nosotros</H1>
-                        <p className={styles.subtitle}>
-                            Estamos listos para llevar tu presencia digital al siguiente nivel. Cuéntanos tu proyecto y nuestro equipo de expertos se pondrá en contacto contigo en menos de 24 horas.
-                        </p>
-                    </div>
-
-                    <div className={styles.grid}>
-                        {/* Info Column */}
-                        <div className={styles.infoColumn}>
-                            <div className={styles.infoCards}>
-                                <div className={styles.infoItem}>
-                                    <div className={styles.iconWrapper}><HiMail /></div>
-                                    <H3>Email</H3>
-                                    <p>info@tuwebencadiz.es</p>
-                                </div>
-                                <div className={styles.infoItem}>
-                                    <div className={styles.iconWrapper}><HiPhone /></div>
-                                    <H3>Teléfono</H3>
-                                    <p>644 466 492</p>
-                                </div>
-                                <div className={`${styles.infoItem} ${styles.addressCard}`}>
-                                    <div className={styles.iconWrapper}><HiLocationMarker /></div>
-                                    <H3>Dirección</H3>
-                                    <p>Puerto Real, Cádiz</p>
-                                </div>
-                            </div>
-
-                            <div className={styles.socialSection}>
-                                <p>SÍGUENOS</p>
-                                <div className={styles.socialIcons}>
-                                    <a href="#" aria-label="Compartir"><FaShareAlt /></a>
-                                    <a href="#" aria-label="Web"><FaGlobe /></a>
-                                    <a href="#" aria-label="Discord"><FaDiscord /></a>
-                                </div>
-                            </div>
-
-                            <div className={styles.mapWrapper}>
-                                <img src="/contact-map.png" alt="Mapa de ubicación" />
-                                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className={styles.mapButton}>
-                                    <HiLocationMarker />
-                                    Ver en Google Maps
-                                </a>
-                            </div>
+                    <div className={styles.innerBox}>
+                        <div className={styles.header}>
+                            <H1 kanit title className={styles.title}>Contacta con nosotros</H1>
+                            <p className={styles.subtitle}>
+                                Estamos listos para llevar tu presencia digital al siguiente nivel. Cuéntanos tu proyecto y nuestro equipo de expertos se pondrá en contacto contigo en menos de 24 horas.
+                            </p>
                         </div>
 
-                        {/* Form Column */}
-                        <div className={styles.formColumn}>
-                            <H3>Envíanos un mensaje</H3>
-                            <form className={styles.form} onSubmit={handleSubmit}>
-                                <div className={styles.formRow}>
-                                    <div className={styles.inputGroup}>
-                                        <label>Nombre completo</label>
-                                        <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required />
+                        <div className={styles.grid}>
+                            {/* Info Column */}
+                            <div className={styles.infoColumn}>
+                                <div className={styles.infoCards}>
+                                    <div className={styles.infoItem}>
+                                        <div className={styles.iconWrapper}><HiMail /></div>
+                                        <H3>Email</H3>
+                                        <p>info@tuwebencadiz.es</p>
                                     </div>
-                                    <div className={styles.inputGroup}>
-                                        <label>Email corporativo</label>
-                                        <input type="email" name="email" placeholder="juan@empresa.com" required />
+                                    <div className={styles.infoItem}>
+                                        <div className={styles.iconWrapper}><HiPhone /></div>
+                                        <H3>Teléfono</H3>
+                                        <p>644 466 492</p>
                                     </div>
-                                </div>
-
-                                <div className={styles.formRow}>
-                                    <div className={styles.inputGroup}>
-                                        <label>Empresa</label>
-                                        <input type="text" name="empresa" placeholder="Nombre de tu negocio" />
-                                    </div>
-                                    <div className={styles.inputGroup}>
-                                        <label>Asunto</label>
-                                        <select name="asunto">
-                                            <option value="Desarrollo Web">Desarrollo Web</option>
-                                            <option value="Diseño UX/UI">Diseño UX/UI</option>
-                                            <option value="Marketing">Marketing</option>
-                                            <option value="Otro">Otro</option>
-                                        </select>
+                                    <div className={`${styles.infoItem} ${styles.addressCard}`}>
+                                        <div className={styles.iconWrapper}><HiLocationMarker /></div>
+                                        <H3>Dirección</H3>
+                                        <p>Puerto Real, Cádiz</p>
                                     </div>
                                 </div>
 
-                                <div className={styles.inputGroup}>
-                                    <label>Mensaje</label>
-                                    <textarea name="mensaje" placeholder="Cuéntanos en qué te podemos ayudar..." required></textarea>
+                                <div className={styles.socialSection}>
+                                    <p>SÍGUENOS</p>
+                                    <div className={styles.socialIcons}>
+                                        <a href="#" aria-label="Compartir"><FaShareAlt /></a>
+                                        <a href="#" aria-label="Web"><FaGlobe /></a>
+                                        <a href="#" aria-label="Discord"><FaDiscord /></a>
+                                    </div>
                                 </div>
 
-                                <button type="submit" className={styles.submitBtn} disabled={status === 'loading'}>
-                                    {status === 'loading' ? 'Enviando...' : status === 'success' ? '¡Mensaje Enviado!' : 'Enviar mensaje'}
-                                </button>
-                                {status === 'error' && <p style={{ color: 'red', fontSize: '0.9rem', marginTop: '1rem', textAlign: 'center' }}>Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo.</p>}
-                            </form>
+                                <div className={styles.mapWrapper}>
+                                    <img src="/contact-map.png" alt="Mapa de ubicación" />
+                                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className={styles.mapButton}>
+                                        <HiLocationMarker />
+                                        Ver en Google Maps
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* Form Column */}
+                            <div className={styles.formColumn}>
+                                <H3>Envíanos un mensaje</H3>
+                                <form className={styles.form} onSubmit={handleSubmit}>
+                                    <div className={styles.formRow}>
+                                        <div className={styles.inputGroup}>
+                                            <label>Nombre completo</label>
+                                            <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required />
+                                        </div>
+                                        <div className={styles.inputGroup}>
+                                            <label>Email corporativo</label>
+                                            <input type="email" name="email" placeholder="juan@empresa.com" required />
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.formRow}>
+                                        <div className={styles.inputGroup}>
+                                            <label>Empresa</label>
+                                            <input type="text" name="empresa" placeholder="Nombre de tu negocio" />
+                                        </div>
+                                        <div className={styles.inputGroup}>
+                                            <label>Asunto</label>
+                                            <select name="asunto">
+                                                <option value="Desarrollo Web">Desarrollo Web</option>
+                                                <option value="Diseño UX/UI">Diseño UX/UI</option>
+                                                <option value="Marketing">Marketing</option>
+                                                <option value="Otro">Otro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.inputGroup}>
+                                        <label>Mensaje</label>
+                                        <textarea name="mensaje" placeholder="Cuéntanos en qué te podemos ayudar..." required></textarea>
+                                    </div>
+
+                                    <button type="submit" className={styles.submitBtn} disabled={status === 'loading'}>
+                                        {status === 'loading' ? 'Enviando...' : status === 'success' ? '¡Mensaje Enviado!' : 'Enviar mensaje'}
+                                    </button>
+                                    {status === 'error' && <p style={{ color: 'red', fontSize: '0.9rem', marginTop: '1rem', textAlign: 'center' }}>Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo.</p>}
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </Container>
