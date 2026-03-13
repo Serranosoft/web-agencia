@@ -3,7 +3,7 @@ import Logo from '@/components/logo/logo'
 import { useRouter } from 'next/router'
 import Link from 'next/link';
 import { useEffect } from 'react';
-import Button from '../content/button';
+import Button from '@/home/button/button';
 
 export default function Header() {
 
@@ -58,10 +58,10 @@ export default function Header() {
                 <Link href="/quienes-somos">Quiénes somos</Link>
                 <Link href="/servicios">Servicios</Link>
                 <Link href="/contacto">Contacto</Link>
-                <Button className={styles.mobileBtn} target="_blank" to="https://form.typeform.com/to/vFA7yHtZ">Presupuesto</Button>
+                <Button className={styles.mobileBtn} target="_blank" href="https://form.typeform.com/to/vFA7yHtZ">Presupuesto</Button>
             </div>
 
-            <Button className={styles.desktopBtn} target="_blank" to="https://form.typeform.com/to/vFA7yHtZ">Presupuesto</Button>
+            <Button className={styles.desktopBtn} target="_blank" href="https://form.typeform.com/to/vFA7yHtZ">Presupuesto</Button>
 
         </header>
     )

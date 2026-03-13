@@ -5,7 +5,7 @@ import Footer from "@/components/footer/footer";
 import H1 from "@/components/content/h1";
 import H2 from "@/components/content/h2";
 import H3 from "@/components/content/h3";
-import Button from "@/components/content/button";
+import Button from "@/home/button/button";
 import styles from "@/styles/servicios/servicios.module.scss";
 import { HiCode, HiTrendingUp, HiUserGroup, HiColorSwatch, HiCheck, HiChevronDown } from "react-icons/hi";
 import { useState } from "react";
@@ -49,12 +49,11 @@ export default function Servicios() {
                             Negocio
                         </H1>
                         <p className={styles.subtitle}>
-                            Flexibles y rentables. Escoge el nivel adecuado a tu fase de crecimiento. Combinamos<br/> 
-                            ingeniería de software de alta calidad con estrategias de marketing orientadas al ROI.
+                            Personalizados, flexibles y rentables. Trabajamos mano a mano con negocios locales ajustando los precios para que todo el mundo pueda actualizarse al mundo digital. Una agencia creada por y para el pueblo.
                         </p>
                         <div className={styles.btnGroup}>
-                            <Button highlight target="_blank" to="https://form.typeform.com/to/vFA7yHtZ">Pedir Presupuesto</Button>
-                            <Button darkOutline to="/desarrollo-web">Ver Proyectos</Button>
+                            <Button target="_blank" href="https://form.typeform.com/to/vFA7yHtZ">Pedir Presupuesto</Button>
+                            <Button secondary href="/desarrollo-web">Ver Proyectos</Button>
                         </div>
                     </div>
                 </Container>

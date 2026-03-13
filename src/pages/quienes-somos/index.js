@@ -5,7 +5,7 @@ import Footer from "@/components/footer/footer";
 import H1 from "@/components/content/h1";
 import H2 from "@/components/content/h2";
 import H3 from "@/components/content/h3";
-import Link from "next/link";
+import Button from "@/home/button/button";
 import styles from "@/styles/quienes/quienes.module.scss";
 import { useEffect, useState, useRef } from "react";
 import { HiArrowRight, HiLightBulb, HiUserGroup, HiColorSwatch, HiTrendingUp } from "react-icons/hi";
@@ -72,8 +72,10 @@ export default function QuienesSomos() {
                                 Nuestra misión es potenciar el crecimiento de marcas modernas a través del desarrollo web de vanguardia y marketing estratégico. No solo creamos sitios, construimos el futuro de tu negocio.
                             </p>
                             <div className={styles.heroButtons}>
-                                <Link href="/contacto" className={styles.btnPrimary}>Conocer más</Link>
-                                <Link href="/desarrollo-web" className={styles.btnSecondary}>Ver proyectos</Link>
+                                <Button href="/contacto">Conocer más</Button>
+                                <Button secondary href="/desarrollo-web">
+                                    Ver proyectos <HiArrowRight />
+                                </Button>
                             </div>
                         </div>
                         <div className={styles.heroImage}>

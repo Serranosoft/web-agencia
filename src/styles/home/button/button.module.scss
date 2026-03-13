@@ -24,13 +24,12 @@
     }
 
     &.secondary {
-        background: transparent;
-        border: 1px solid rgba($charcoal, 0.1);
+        background: rgba($charcoal, 0.05);
+        border: none;
         color: $charcoal;
 
         &:hover {
-            background: rgba($charcoal, 0.03);
-            border-color: rgba($charcoal, 0.2);
+            background: rgba($charcoal, 0.08);
             box-shadow: none;
         }
     }
