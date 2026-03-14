@@ -6,7 +6,6 @@ import Testimonials from '@/home/testimonials/testimonials'
 import CaseStudies from '@/home/case-studies/case-studies'
 import SeoCharts from '@/home/charts/seo-charts'
 import Roadmap from '@/home/roadmap/roadmap'
-import Floating from '@/components/contact/floating'
 import Rocket from '@/home/rocket/rocket'
 
 import Faq from '@/home/faq/faq'
@@ -56,7 +55,6 @@ export default function Home() {
 
             */}
             <Aos />
-            <Floating />
             <Hero />
             <Capabilities />
             <SeoCharts />

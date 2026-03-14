@@ -6,7 +6,7 @@ import H1 from "@/components/content/h1";
 import H3 from "@/components/content/h3";
 import styles from "@/styles/contacto/contacto.module.scss";
 import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
-import { FaShareAlt, FaGlobe, FaDiscord } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { useState } from "react";
 
 export default function Contacto() {
@@ -82,11 +82,11 @@ export default function Contacto() {
                                 </div>
 
                                 <div className={styles.socialSection}>
-                                    <p>SÍGUENOS</p>
+                                    <p>CONECTA CON NOSOTROS</p>
                                     <div className={styles.socialIcons}>
-                                        <a href="#" aria-label="Compartir"><FaShareAlt /></a>
-                                        <a href="#" aria-label="Web"><FaGlobe /></a>
-                                        <a href="#" aria-label="Discord"><FaDiscord /></a>
+                                        <a href="https://www.linkedin.com/in/paula-quintana-36856b204/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                            <FaLinkedin />
+                                        </a>
                                     </div>
                                 </div>
 

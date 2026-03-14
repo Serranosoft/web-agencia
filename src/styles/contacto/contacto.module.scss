@@ -73,29 +73,43 @@
 }
 
 .infoItem {
+    background: $white;
+    padding: 2.25rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+    height: 100%;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    }
+
     .iconWrapper {
-        width: 45px;
-        height: 45px;
-        background: rgba($gold, 0.15);
+        width: 50px;
+        height: 50px;
+        background: rgba($gold, 0.12);
         color: $gold;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 0.5rem;
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
+        border-radius: 0.75rem;
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
     }
 
     h3 {
         color: $charcoal;
         font-weight: 800;
-        font-size: 1.1rem;
-        margin: 0 0 0.5rem;
+        font-size: 1.2rem;
+        margin: 0 0 0.75rem;
+        letter-spacing: -0.5px;
     }
 
     p {
-        color: rgba($charcoal, 0.7);
-        font-size: 0.95rem;
+        color: rgba($charcoal, 0.75);
+        font-size: 1rem;
         margin: 0;
         line-height: 1.6;
     }

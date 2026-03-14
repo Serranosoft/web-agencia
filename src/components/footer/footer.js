@@ -1,6 +1,6 @@
 import styles from '@/styles/components/footer/footer.module.scss'
 import Container from '@/components/content/container'
-import { FaLinkedinIn, FaXTwitter, FaBehance } from 'react-icons/fa6'
+import { FaLinkedinIn } from 'react-icons/fa6'
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -18,14 +18,8 @@ export default function Footer() {
                     </div>
 
                     <div className={styles.socials}>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/paula-quintana-36856b204/" target="_blank" rel="noopener noreferrer">
                             <FaLinkedinIn /> <span>LinkedIn</span>
-                        </a>
-                        <a href="https://x.com" target="_blank" rel="noopener noreferrer">
-                            <FaXTwitter /> <span>X (Twitter)</span>
-                        </a>
-                        <a href="https://behance.net" target="_blank" rel="noopener noreferrer">
-                            <FaBehance /> <span>Behance</span>
                         </a>
                     </div>
                 </div>
